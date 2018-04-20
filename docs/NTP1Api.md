@@ -1,6 +1,6 @@
 # swagger_client.NTP1Api
 
-All URIs are relative to *https://ntp1node.nebl.io:1443*
+All URIs are relative to *https://ntp1node.nebl.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_token_id**](NTP1Api.md#get_token_id) | **GET** /ntp1/tokenid/{tokensymbol} | Returns the tokenId representing a token
 [**get_token_metadata_of_issuance**](NTP1Api.md#get_token_metadata_of_issuance) | **GET** /ntp1/tokenmetadata/{tokenid} | Get Issuance Metadata of Token
 [**get_token_metadata_of_utxo**](NTP1Api.md#get_token_metadata_of_utxo) | **GET** /ntp1/tokenmetadata/{tokenid}/{utxo} | Get UTXO Metadata of Token
+[**get_transaction_info**](NTP1Api.md#get_transaction_info) | **GET** /ntp1/transactioninfo/{txid} | Information On an NTP1 Transaction
 [**issue_token**](NTP1Api.md#issue_token) | **POST** /ntp1/issue | Builds a transaction that issues a new NTP1 Token
 [**send_token**](NTP1Api.md#send_token) | **POST** /ntp1/sendtoken | Builds a transaction that sends an NTP1 Token
 
@@ -260,7 +261,7 @@ No authorization required
 
 Get Issuance Metadata of Token
 
-Returns the metadata associated with a token at time of issuance.  
+Returns the metadata associated with a token at time of issuance. 
 
 ### Example
 ```python
@@ -341,6 +342,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetTokenMetadataResponse**](GetTokenMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_transaction_info**
+> GetTransactionInfoResponse get_transaction_info(txid)
+
+Information On an NTP1 Transaction
+
+Returns detailed information regarding an NTP1 transaction. 
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.NTP1Api()
+txid = 'txid_example' # str | Neblio txid to get information on.
+
+try:
+    # Information On an NTP1 Transaction
+    api_response = api_instance.get_transaction_info(txid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling NTP1Api->get_transaction_info: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **txid** | **str**| Neblio txid to get information on. | 
+
+### Return type
+
+[**GetTransactionInfoResponse**](GetTransactionInfoResponse.md)
 
 ### Authorization
 
