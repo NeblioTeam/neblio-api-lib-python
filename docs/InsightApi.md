@@ -1,4 +1,4 @@
-# swagger_client.InsightApi
+# neblio-api.InsightApi
 
 All URIs are relative to *https://ntp1node.nebl.io*
 
@@ -28,15 +28,16 @@ Returns address object
 Returns NEBL address object containing information on a specific address
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -63,28 +64,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_address_balance**
-> GetAddressBalanceResponse get_address_balance(address)
+> float get_address_balance(address)
 
 Returns address balance in sats
 
 Returns NEBL address balance in satoshis
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -103,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressBalanceResponse**](GetAddressBalanceResponse.md)
+**float**
 
 ### Authorization
 
@@ -111,28 +113,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_address_total_received**
-> GetAddressTotalReceivedResponse get_address_total_received(address)
+> float get_address_total_received(address)
 
 Returns total received by address in sats
 
 Returns total NEBL received by address in satoshis
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -151,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressTotalReceivedResponse**](GetAddressTotalReceivedResponse.md)
+**float**
 
 ### Authorization
 
@@ -159,28 +162,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_address_total_sent**
-> GetAddressTotalSentResponse get_address_total_sent(address)
+> float get_address_total_sent(address)
 
 Returns total sent by address in sats
 
 Returns total NEBL sent by address in satoshis
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -199,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressTotalSentResponse**](GetAddressTotalSentResponse.md)
+**float**
 
 ### Authorization
 
@@ -207,28 +211,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_address_unconfirmed_balance**
-> GetAddressUnconfirmedBalanceResponse get_address_unconfirmed_balance(address)
+> float get_address_unconfirmed_balance(address)
 
 Returns address unconfirmed balance in sats
 
 Returns NEBL address unconfirmed balance in satoshis
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -247,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressUnconfirmedBalanceResponse**](GetAddressUnconfirmedBalanceResponse.md)
+**float**
 
 ### Authorization
 
@@ -255,28 +260,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_address_utxos**
-> GetAddressUtxosResponse get_address_utxos(address)
+> list[object] get_address_utxos(address)
 
 Returns all UTXOs at a given address
 
 Returns information on each Unspent Transaction Output contained at an address
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address
 
 try:
@@ -295,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAddressUtxosResponse**](GetAddressUtxosResponse.md)
+**list[object]**
 
 ### Authorization
 
@@ -303,7 +309,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -316,15 +322,16 @@ Returns information regarding a Neblio block
 Returns blockchain data for a given block based upon the block hash
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 blockhash = 'blockhash_example' # str | Block Hash
 
 try:
@@ -351,7 +358,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -364,16 +371,17 @@ Returns block hash of block
 Returns the block hash of a block at a given block index
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
-blockindex = 8.14 # float | Block Index
+api_instance = neblio-api.InsightApi()
+blockindex = 3.4 # float | Block Index
 
 try:
     # Returns block hash of block
@@ -399,7 +407,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -412,15 +420,16 @@ Returns raw transaction hex
 Returns raw transaction hex representing a NEBL transaction
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 txid = 'txid_example' # str | Transaction ID
 
 try:
@@ -447,28 +456,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_status**
-> GetStatusResponse get_status(q=q)
+> object get_status(q=q)
 
 Utility API for calling several blockchain node functions
 
-tility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash
+Utility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 q = 'q_example' # str | Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash (optional)
 
 try:
@@ -487,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetStatusResponse**](GetStatusResponse.md)
+**object**
 
 ### Authorization
 
@@ -495,7 +505,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -508,15 +518,16 @@ Get node sync status
 Returns information on the node's sync progress
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 
 try:
     # Get node sync status
@@ -539,7 +550,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -552,15 +563,16 @@ Returns transaction object
 Returns NEBL transaction object representing a NEBL transaction
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 txid = 'txid_example' # str | Transaction ID
 
 try:
@@ -587,35 +599,36 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_txs**
-> GetTxsResponse get_txs(address=address, block=block, page=page)
+> GetTxsResponse get_txs(address=address, block=block, page_num=page_num)
 
 Get transactions by block or address
 
 Returns all transactions by block or address
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
+api_instance = neblio-api.InsightApi()
 address = 'address_example' # str | Address (optional)
 block = 'block_example' # str | Block Hash (optional)
-page = 8.14 # float | Page number to display (optional)
+page_num = 3.4 # float | Page number to display (optional)
 
 try:
     # Get transactions by block or address
-    api_response = api_instance.get_txs(address=address, block=block, page=page)
+    api_response = api_instance.get_txs(address=address, block=block, page_num=page_num)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InsightApi->get_txs: %s\n" % e)
@@ -627,7 +640,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **str**| Address | [optional] 
  **block** | **str**| Block Hash | [optional] 
- **page** | **float**| Page number to display | [optional] 
+ **page_num** | **float**| Page number to display | [optional] 
 
 ### Return type
 
@@ -639,7 +652,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -652,16 +665,17 @@ Broadcasts a signed raw transaction to the network (not NTP1 specific)
 Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InsightApi()
-body = swagger_client.SendTxRequest() # SendTxRequest | Object representing a transaction to broadcast
+api_instance = neblio-api.InsightApi()
+body = neblio-api.SendTxRequest() # SendTxRequest | Object representing a transaction to broadcast
 
 try:
     # Broadcasts a signed raw transaction to the network (not NTP1 specific)

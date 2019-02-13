@@ -1,4 +1,4 @@
-# swagger_client.NTP1Api
+# neblio-api.NTP1Api
 
 All URIs are relative to *https://ntp1node.nebl.io*
 
@@ -24,16 +24,17 @@ Broadcasts a signed raw transaction to the network
 Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
-body = swagger_client.BroadcastTxRequest() # BroadcastTxRequest | Object representing a transaction to broadcast
+api_instance = neblio-api.NTP1Api()
+body = neblio-api.BroadcastTxRequest() # BroadcastTxRequest | Object representing a transaction to broadcast
 
 try:
     # Broadcasts a signed raw transaction to the network
@@ -72,16 +73,17 @@ Builds a transaction that burns an NTP1 Token
 Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
-body = swagger_client.BurnTokenRequest() # BurnTokenRequest | Object representing the token to be burned
+api_instance = neblio-api.NTP1Api()
+body = neblio-api.BurnTokenRequest() # BurnTokenRequest | Object representing the token to be burned
 
 try:
     # Builds a transaction that burns an NTP1 Token
@@ -120,15 +122,16 @@ Information On a Neblio Address
 Returns both NEBL and NTP1 token UTXOs held at the given address. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 address = 'address_example' # str | Neblio Address to get information on.
 
 try:
@@ -155,7 +158,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -168,15 +171,16 @@ Get Addresses Holding a Token
 Returns the the the addresses holding a token and how many tokens are held 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 tokenid = 'tokenid_example' # str | TokenId to request metadata for
 
 try:
@@ -203,7 +207,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -216,15 +220,16 @@ Returns the tokenId representing a token
 Translates a token symbol to a tokenId if a token exists with that symbol on the network 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 tokensymbol = 'tokensymbol_example' # str | Token symbol
 
 try:
@@ -251,7 +256,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -264,15 +269,16 @@ Get Issuance Metadata of Token
 Returns the metadata associated with a token at time of issuance. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 tokenid = 'tokenid_example' # str | TokenId to request metadata for
 
 try:
@@ -299,7 +305,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -312,15 +318,16 @@ Get UTXO Metadata of Token
 Returns the metadata associated with a token for that specific utxo instead of the issuance transaction. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 tokenid = 'tokenid_example' # str | TokenId to request metadata for
 utxo = 'utxo_example' # str | Specific UTXO to request metadata for
 
@@ -349,7 +356,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -362,15 +369,16 @@ Information On an NTP1 Transaction
 Returns detailed information regarding an NTP1 transaction. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
+api_instance = neblio-api.NTP1Api()
 txid = 'txid_example' # str | Neblio txid to get information on.
 
 try:
@@ -397,7 +405,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -410,16 +418,17 @@ Builds a transaction that issues a new NTP1 Token
 Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
-body = swagger_client.IssueTokenRequest() # IssueTokenRequest | Object representing the token to be created
+api_instance = neblio-api.NTP1Api()
+body = neblio-api.IssueTokenRequest() # IssueTokenRequest | Object representing the token to be created
 
 try:
     # Builds a transaction that issues a new NTP1 Token
@@ -458,16 +467,17 @@ Builds a transaction that sends an NTP1 Token
 Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.NTP1Api()
-body = swagger_client.SendTokenRequest() # SendTokenRequest | Object representing the token to be sent
+api_instance = neblio-api.NTP1Api()
+body = neblio-api.SendTokenRequest() # SendTokenRequest | Object representing the token to be sent
 
 try:
     # Builds a transaction that sends an NTP1 Token

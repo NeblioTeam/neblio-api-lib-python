@@ -1,4 +1,4 @@
-# swagger_client.TestnetFaucetApi
+# neblio-api.TestnetFaucetApi
 
 All URIs are relative to *https://ntp1node.nebl.io*
 
@@ -15,17 +15,18 @@ Withdraws testnet NEBL to the specified address
 Withdraw testnet NEBL to your Neblio Testnet address. By default amount is 1500000000 or 15 NEBL and has a max of 50 NEBL. Only 2 withdrawals allowed per 24 hour period. 
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import neblio-api
+from neblio-api.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TestnetFaucetApi()
+api_instance = neblio-api.TestnetFaucetApi()
 address = 'address_example' # str | Your Neblio Testnet Address
-amount = 8.14 # float | Amount of NEBL to withdrawal in satoshis (optional)
+amount = 3.4 # float | Amount of NEBL to withdrawal in satoshis (optional)
 
 try:
     # Withdraws testnet NEBL to the specified address
@@ -52,7 +53,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
