@@ -31,47 +31,26 @@ class GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'value': 'str',
-        'key': 'str'
+        'key': 'str',
+        'value': 'str'
     }
 
     attribute_map = {
-        'value': 'value',
-        'key': 'key'
+        'key': 'key',
+        'value': 'value'
     }
 
-    def __init__(self, value=None, key=None):  # noqa: E501
+    def __init__(self, key=None, value=None):  # noqa: E501
         """GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta - a model defined in OpenAPI"""  # noqa: E501
 
-        self._value = None
         self._key = None
+        self._value = None
         self.discriminator = None
 
-        if value is not None:
-            self.value = value
         if key is not None:
             self.key = key
-
-    @property
-    def value(self):
-        """Gets the value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
-
-
-        :return: The value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
-        :rtype: str
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        """Sets the value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.
-
-
-        :param value: The value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
-        :type: str
-        """
-
-        self._value = value
+        if value is not None:
+            self.value = value
 
     @property
     def key(self):
@@ -93,6 +72,27 @@ class GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta(object):
         """
 
         self._key = key
+
+    @property
+    def value(self):
+        """Gets the value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
+
+
+        :return: The value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.
+
+
+        :param value: The value of this GetTokenMetadataResponseMetadataOfIssuanceDataUserDataMeta.  # noqa: E501
+        :type: str
+        """
+
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

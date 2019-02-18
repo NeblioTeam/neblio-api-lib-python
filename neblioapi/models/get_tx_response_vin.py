@@ -31,116 +31,51 @@ class GetTxResponseVin(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'sequence': 'float',
-        'script_sig': 'GetTransactionInfoResponseScriptSig',
-        'value_sat': 'float',
         'txid': 'str',
+        'vout': 'float',
+        'script_sig': 'GetTransactionInfoResponseScriptSig',
+        'sequence': 'float',
         'value': 'float',
-        'n': 'float',
-        'vout': 'float'
+        'value_sat': 'float',
+        'n': 'float'
     }
 
     attribute_map = {
-        'sequence': 'sequence',
-        'script_sig': 'scriptSig',
-        'value_sat': 'valueSat',
         'txid': 'txid',
+        'vout': 'vout',
+        'script_sig': 'scriptSig',
+        'sequence': 'sequence',
         'value': 'value',
-        'n': 'n',
-        'vout': 'vout'
+        'value_sat': 'valueSat',
+        'n': 'n'
     }
 
-    def __init__(self, sequence=None, script_sig=None, value_sat=None, txid=None, value=None, n=None, vout=None):  # noqa: E501
+    def __init__(self, txid=None, vout=None, script_sig=None, sequence=None, value=None, value_sat=None, n=None):  # noqa: E501
         """GetTxResponseVin - a model defined in OpenAPI"""  # noqa: E501
 
-        self._sequence = None
-        self._script_sig = None
-        self._value_sat = None
         self._txid = None
-        self._value = None
-        self._n = None
         self._vout = None
+        self._script_sig = None
+        self._sequence = None
+        self._value = None
+        self._value_sat = None
+        self._n = None
         self.discriminator = None
 
-        if sequence is not None:
-            self.sequence = sequence
-        if script_sig is not None:
-            self.script_sig = script_sig
-        if value_sat is not None:
-            self.value_sat = value_sat
         if txid is not None:
             self.txid = txid
-        if value is not None:
-            self.value = value
-        if n is not None:
-            self.n = n
         if vout is not None:
             self.vout = vout
-
-    @property
-    def sequence(self):
-        """Gets the sequence of this GetTxResponseVin.  # noqa: E501
-
-
-        :return: The sequence of this GetTxResponseVin.  # noqa: E501
-        :rtype: float
-        """
-        return self._sequence
-
-    @sequence.setter
-    def sequence(self, sequence):
-        """Sets the sequence of this GetTxResponseVin.
-
-
-        :param sequence: The sequence of this GetTxResponseVin.  # noqa: E501
-        :type: float
-        """
-
-        self._sequence = sequence
-
-    @property
-    def script_sig(self):
-        """Gets the script_sig of this GetTxResponseVin.  # noqa: E501
-
-
-        :return: The script_sig of this GetTxResponseVin.  # noqa: E501
-        :rtype: GetTransactionInfoResponseScriptSig
-        """
-        return self._script_sig
-
-    @script_sig.setter
-    def script_sig(self, script_sig):
-        """Sets the script_sig of this GetTxResponseVin.
-
-
-        :param script_sig: The script_sig of this GetTxResponseVin.  # noqa: E501
-        :type: GetTransactionInfoResponseScriptSig
-        """
-
-        self._script_sig = script_sig
-
-    @property
-    def value_sat(self):
-        """Gets the value_sat of this GetTxResponseVin.  # noqa: E501
-
-        Value of input in NEBL satoshi  # noqa: E501
-
-        :return: The value_sat of this GetTxResponseVin.  # noqa: E501
-        :rtype: float
-        """
-        return self._value_sat
-
-    @value_sat.setter
-    def value_sat(self, value_sat):
-        """Sets the value_sat of this GetTxResponseVin.
-
-        Value of input in NEBL satoshi  # noqa: E501
-
-        :param value_sat: The value_sat of this GetTxResponseVin.  # noqa: E501
-        :type: float
-        """
-
-        self._value_sat = value_sat
+        if script_sig is not None:
+            self.script_sig = script_sig
+        if sequence is not None:
+            self.sequence = sequence
+        if value is not None:
+            self.value = value
+        if value_sat is not None:
+            self.value_sat = value_sat
+        if n is not None:
+            self.n = n
 
     @property
     def txid(self):
@@ -166,6 +101,71 @@ class GetTxResponseVin(object):
         self._txid = txid
 
     @property
+    def vout(self):
+        """Gets the vout of this GetTxResponseVin.  # noqa: E501
+
+        output index  # noqa: E501
+
+        :return: The vout of this GetTxResponseVin.  # noqa: E501
+        :rtype: float
+        """
+        return self._vout
+
+    @vout.setter
+    def vout(self, vout):
+        """Sets the vout of this GetTxResponseVin.
+
+        output index  # noqa: E501
+
+        :param vout: The vout of this GetTxResponseVin.  # noqa: E501
+        :type: float
+        """
+
+        self._vout = vout
+
+    @property
+    def script_sig(self):
+        """Gets the script_sig of this GetTxResponseVin.  # noqa: E501
+
+
+        :return: The script_sig of this GetTxResponseVin.  # noqa: E501
+        :rtype: GetTransactionInfoResponseScriptSig
+        """
+        return self._script_sig
+
+    @script_sig.setter
+    def script_sig(self, script_sig):
+        """Sets the script_sig of this GetTxResponseVin.
+
+
+        :param script_sig: The script_sig of this GetTxResponseVin.  # noqa: E501
+        :type: GetTransactionInfoResponseScriptSig
+        """
+
+        self._script_sig = script_sig
+
+    @property
+    def sequence(self):
+        """Gets the sequence of this GetTxResponseVin.  # noqa: E501
+
+
+        :return: The sequence of this GetTxResponseVin.  # noqa: E501
+        :rtype: float
+        """
+        return self._sequence
+
+    @sequence.setter
+    def sequence(self, sequence):
+        """Sets the sequence of this GetTxResponseVin.
+
+
+        :param sequence: The sequence of this GetTxResponseVin.  # noqa: E501
+        :type: float
+        """
+
+        self._sequence = sequence
+
+    @property
     def value(self):
         """Gets the value of this GetTxResponseVin.  # noqa: E501
 
@@ -189,6 +189,29 @@ class GetTxResponseVin(object):
         self._value = value
 
     @property
+    def value_sat(self):
+        """Gets the value_sat of this GetTxResponseVin.  # noqa: E501
+
+        Value of input in NEBL satoshi  # noqa: E501
+
+        :return: The value_sat of this GetTxResponseVin.  # noqa: E501
+        :rtype: float
+        """
+        return self._value_sat
+
+    @value_sat.setter
+    def value_sat(self, value_sat):
+        """Sets the value_sat of this GetTxResponseVin.
+
+        Value of input in NEBL satoshi  # noqa: E501
+
+        :param value_sat: The value_sat of this GetTxResponseVin.  # noqa: E501
+        :type: float
+        """
+
+        self._value_sat = value_sat
+
+    @property
     def n(self):
         """Gets the n of this GetTxResponseVin.  # noqa: E501
 
@@ -210,29 +233,6 @@ class GetTxResponseVin(object):
         """
 
         self._n = n
-
-    @property
-    def vout(self):
-        """Gets the vout of this GetTxResponseVin.  # noqa: E501
-
-        output index  # noqa: E501
-
-        :return: The vout of this GetTxResponseVin.  # noqa: E501
-        :rtype: float
-        """
-        return self._vout
-
-    @vout.setter
-    def vout(self, vout):
-        """Sets the vout of this GetTxResponseVin.
-
-        output index  # noqa: E501
-
-        :param vout: The vout of this GetTxResponseVin.  # noqa: E501
-        :type: float
-        """
-
-        self._vout = vout
 
     def to_dict(self):
         """Returns the model properties as a dict"""

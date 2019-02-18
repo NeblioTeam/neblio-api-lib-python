@@ -1272,39 +1272,39 @@ class TestnetInsightApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def testnet_send_tx(self, body, **kwargs):  # noqa: E501
+    def testnet_send_tx(self, send_tx_request, **kwargs):  # noqa: E501
         """Broadcasts a signed raw transaction to the network (not NTP1 specific)  # noqa: E501
 
         Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.testnet_send_tx(body, async_req=True)
+        >>> thread = api.testnet_send_tx(send_tx_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SendTxRequest body: Object representing a transaction to broadcast (required)
+        :param SendTxRequest send_tx_request: Object representing a transaction to broadcast (required)
         :return: BroadcastTxResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.testnet_send_tx_with_http_info(body, **kwargs)  # noqa: E501
+            return self.testnet_send_tx_with_http_info(send_tx_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.testnet_send_tx_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.testnet_send_tx_with_http_info(send_tx_request, **kwargs)  # noqa: E501
             return data
 
-    def testnet_send_tx_with_http_info(self, body, **kwargs):  # noqa: E501
+    def testnet_send_tx_with_http_info(self, send_tx_request, **kwargs):  # noqa: E501
         """Broadcasts a signed raw transaction to the network (not NTP1 specific)  # noqa: E501
 
         Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.testnet_send_tx_with_http_info(body, async_req=True)
+        >>> thread = api.testnet_send_tx_with_http_info(send_tx_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SendTxRequest body: Object representing a transaction to broadcast (required)
+        :param SendTxRequest send_tx_request: Object representing a transaction to broadcast (required)
         :return: BroadcastTxResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1312,7 +1312,7 @@ class TestnetInsightApi(object):
 
         local_var_params = locals()
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['send_tx_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1326,10 +1326,10 @@ class TestnetInsightApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in local_var_params or
-                local_var_params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `testnet_send_tx`")  # noqa: E501
+        # verify the required parameter 'send_tx_request' is set
+        if ('send_tx_request' not in local_var_params or
+                local_var_params['send_tx_request'] is None):
+            raise ValueError("Missing the required parameter `send_tx_request` when calling `testnet_send_tx`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1343,8 +1343,8 @@ class TestnetInsightApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in local_var_params:
-            body_params = local_var_params['body']
+        if 'send_tx_request' in local_var_params:
+            body_params = local_var_params['send_tx_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

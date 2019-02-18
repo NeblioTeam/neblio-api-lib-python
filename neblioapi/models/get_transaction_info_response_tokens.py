@@ -31,92 +31,46 @@ class GetTransactionInfoResponseTokens(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'amount': 'float',
-        'aggregation_policy': 'str',
         'token_id': 'str',
-        'lock_status': 'bool',
+        'amount': 'float',
         'issue_txid': 'str',
-        'divisibility': 'float'
+        'divisibility': 'float',
+        'lock_status': 'bool',
+        'aggregation_policy': 'str'
     }
 
     attribute_map = {
-        'amount': 'amount',
-        'aggregation_policy': 'aggregationPolicy',
         'token_id': 'tokenId',
-        'lock_status': 'lockStatus',
+        'amount': 'amount',
         'issue_txid': 'issueTxid',
-        'divisibility': 'divisibility'
+        'divisibility': 'divisibility',
+        'lock_status': 'lockStatus',
+        'aggregation_policy': 'aggregationPolicy'
     }
 
-    def __init__(self, amount=None, aggregation_policy=None, token_id=None, lock_status=None, issue_txid=None, divisibility=None):  # noqa: E501
+    def __init__(self, token_id=None, amount=None, issue_txid=None, divisibility=None, lock_status=None, aggregation_policy=None):  # noqa: E501
         """GetTransactionInfoResponseTokens - a model defined in OpenAPI"""  # noqa: E501
 
-        self._amount = None
-        self._aggregation_policy = None
         self._token_id = None
-        self._lock_status = None
+        self._amount = None
         self._issue_txid = None
         self._divisibility = None
+        self._lock_status = None
+        self._aggregation_policy = None
         self.discriminator = None
 
-        if amount is not None:
-            self.amount = amount
-        if aggregation_policy is not None:
-            self.aggregation_policy = aggregation_policy
         if token_id is not None:
             self.token_id = token_id
-        if lock_status is not None:
-            self.lock_status = lock_status
+        if amount is not None:
+            self.amount = amount
         if issue_txid is not None:
             self.issue_txid = issue_txid
         if divisibility is not None:
             self.divisibility = divisibility
-
-    @property
-    def amount(self):
-        """Gets the amount of this GetTransactionInfoResponseTokens.  # noqa: E501
-
-        Number of tokens  # noqa: E501
-
-        :return: The amount of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :rtype: float
-        """
-        return self._amount
-
-    @amount.setter
-    def amount(self, amount):
-        """Sets the amount of this GetTransactionInfoResponseTokens.
-
-        Number of tokens  # noqa: E501
-
-        :param amount: The amount of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :type: float
-        """
-
-        self._amount = amount
-
-    @property
-    def aggregation_policy(self):
-        """Gets the aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
-
-        Whether the tokens are aggregatable  # noqa: E501
-
-        :return: The aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :rtype: str
-        """
-        return self._aggregation_policy
-
-    @aggregation_policy.setter
-    def aggregation_policy(self, aggregation_policy):
-        """Sets the aggregation_policy of this GetTransactionInfoResponseTokens.
-
-        Whether the tokens are aggregatable  # noqa: E501
-
-        :param aggregation_policy: The aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :type: str
-        """
-
-        self._aggregation_policy = aggregation_policy
+        if lock_status is not None:
+            self.lock_status = lock_status
+        if aggregation_policy is not None:
+            self.aggregation_policy = aggregation_policy
 
     @property
     def token_id(self):
@@ -142,27 +96,27 @@ class GetTransactionInfoResponseTokens(object):
         self._token_id = token_id
 
     @property
-    def lock_status(self):
-        """Gets the lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
+    def amount(self):
+        """Gets the amount of this GetTransactionInfoResponseTokens.  # noqa: E501
 
-        Whether issuance of more tokens is locked  # noqa: E501
+        Number of tokens  # noqa: E501
 
-        :return: The lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :rtype: bool
+        :return: The amount of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :rtype: float
         """
-        return self._lock_status
+        return self._amount
 
-    @lock_status.setter
-    def lock_status(self, lock_status):
-        """Sets the lock_status of this GetTransactionInfoResponseTokens.
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this GetTransactionInfoResponseTokens.
 
-        Whether issuance of more tokens is locked  # noqa: E501
+        Number of tokens  # noqa: E501
 
-        :param lock_status: The lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
-        :type: bool
+        :param amount: The amount of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :type: float
         """
 
-        self._lock_status = lock_status
+        self._amount = amount
 
     @property
     def issue_txid(self):
@@ -209,6 +163,52 @@ class GetTransactionInfoResponseTokens(object):
         """
 
         self._divisibility = divisibility
+
+    @property
+    def lock_status(self):
+        """Gets the lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
+
+        Whether issuance of more tokens is locked  # noqa: E501
+
+        :return: The lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :rtype: bool
+        """
+        return self._lock_status
+
+    @lock_status.setter
+    def lock_status(self, lock_status):
+        """Sets the lock_status of this GetTransactionInfoResponseTokens.
+
+        Whether issuance of more tokens is locked  # noqa: E501
+
+        :param lock_status: The lock_status of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :type: bool
+        """
+
+        self._lock_status = lock_status
+
+    @property
+    def aggregation_policy(self):
+        """Gets the aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
+
+        Whether the tokens are aggregatable  # noqa: E501
+
+        :return: The aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregation_policy
+
+    @aggregation_policy.setter
+    def aggregation_policy(self, aggregation_policy):
+        """Sets the aggregation_policy of this GetTransactionInfoResponseTokens.
+
+        Whether the tokens are aggregatable  # noqa: E501
+
+        :param aggregation_policy: The aggregation_policy of this GetTransactionInfoResponseTokens.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregation_policy = aggregation_policy
 
     def to_dict(self):
         """Returns the model properties as a dict"""

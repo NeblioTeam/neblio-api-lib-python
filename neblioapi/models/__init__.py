@@ -60,6 +60,8 @@ from neblioapi.models.issue_token_request_metadata_rules_holders import IssueTok
 from neblioapi.models.issue_token_request_metadata_urls import IssueTokenRequestMetadataUrls
 from neblioapi.models.issue_token_request_transfer import IssueTokenRequestTransfer
 from neblioapi.models.issue_token_response import IssueTokenResponse
+from neblioapi.models.rpc_request import RpcRequest
+from neblioapi.models.rpc_response import RpcResponse
 from neblioapi.models.send_token_request import SendTokenRequest
 from neblioapi.models.send_token_request_to import SendTokenRequestTo
 from neblioapi.models.send_token_response import SendTokenResponse

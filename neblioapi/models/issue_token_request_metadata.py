@@ -31,51 +31,120 @@ class IssueTokenRequestMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'token_name': 'str',
+        'issuer': 'str',
+        'description': 'str',
         'urls': 'list[IssueTokenRequestMetadataUrls]',
         'user_data': 'GetTokenMetadataResponseMetadataOfIssuanceDataUserData',
-        'token_name': 'str',
-        'description': 'str',
         'encryptions': 'list[IssueTokenRequestMetadataEncryptions]',
-        'rules': 'IssueTokenRequestMetadataRules',
-        'issuer': 'str'
+        'rules': 'IssueTokenRequestMetadataRules'
     }
 
     attribute_map = {
+        'token_name': 'tokenName',
+        'issuer': 'issuer',
+        'description': 'description',
         'urls': 'urls',
         'user_data': 'userData',
-        'token_name': 'tokenName',
-        'description': 'description',
         'encryptions': 'encryptions',
-        'rules': 'rules',
-        'issuer': 'issuer'
+        'rules': 'rules'
     }
 
-    def __init__(self, urls=None, user_data=None, token_name=None, description=None, encryptions=None, rules=None, issuer=None):  # noqa: E501
+    def __init__(self, token_name=None, issuer=None, description=None, urls=None, user_data=None, encryptions=None, rules=None):  # noqa: E501
         """IssueTokenRequestMetadata - a model defined in OpenAPI"""  # noqa: E501
 
+        self._token_name = None
+        self._issuer = None
+        self._description = None
         self._urls = None
         self._user_data = None
-        self._token_name = None
-        self._description = None
         self._encryptions = None
         self._rules = None
-        self._issuer = None
         self.discriminator = None
 
+        if token_name is not None:
+            self.token_name = token_name
+        if issuer is not None:
+            self.issuer = issuer
+        if description is not None:
+            self.description = description
         if urls is not None:
             self.urls = urls
         if user_data is not None:
             self.user_data = user_data
-        if token_name is not None:
-            self.token_name = token_name
-        if description is not None:
-            self.description = description
         if encryptions is not None:
             self.encryptions = encryptions
         if rules is not None:
             self.rules = rules
-        if issuer is not None:
-            self.issuer = issuer
+
+    @property
+    def token_name(self):
+        """Gets the token_name of this IssueTokenRequestMetadata.  # noqa: E501
+
+        Token Symbol it will be identified by (ex. NIBBL)  # noqa: E501
+
+        :return: The token_name of this IssueTokenRequestMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._token_name
+
+    @token_name.setter
+    def token_name(self, token_name):
+        """Sets the token_name of this IssueTokenRequestMetadata.
+
+        Token Symbol it will be identified by (ex. NIBBL)  # noqa: E501
+
+        :param token_name: The token_name of this IssueTokenRequestMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._token_name = token_name
+
+    @property
+    def issuer(self):
+        """Gets the issuer of this IssueTokenRequestMetadata.  # noqa: E501
+
+        Name of token issuer  # noqa: E501
+
+        :return: The issuer of this IssueTokenRequestMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._issuer
+
+    @issuer.setter
+    def issuer(self, issuer):
+        """Sets the issuer of this IssueTokenRequestMetadata.
+
+        Name of token issuer  # noqa: E501
+
+        :param issuer: The issuer of this IssueTokenRequestMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._issuer = issuer
+
+    @property
+    def description(self):
+        """Gets the description of this IssueTokenRequestMetadata.  # noqa: E501
+
+        Long name or description of token (ex. Nibble)  # noqa: E501
+
+        :return: The description of this IssueTokenRequestMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this IssueTokenRequestMetadata.
+
+        Long name or description of token (ex. Nibble)  # noqa: E501
+
+        :param description: The description of this IssueTokenRequestMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def urls(self):
@@ -120,52 +189,6 @@ class IssueTokenRequestMetadata(object):
         self._user_data = user_data
 
     @property
-    def token_name(self):
-        """Gets the token_name of this IssueTokenRequestMetadata.  # noqa: E501
-
-        Token Symbol it will be identified by (ex. NIBBL)  # noqa: E501
-
-        :return: The token_name of this IssueTokenRequestMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._token_name
-
-    @token_name.setter
-    def token_name(self, token_name):
-        """Sets the token_name of this IssueTokenRequestMetadata.
-
-        Token Symbol it will be identified by (ex. NIBBL)  # noqa: E501
-
-        :param token_name: The token_name of this IssueTokenRequestMetadata.  # noqa: E501
-        :type: str
-        """
-
-        self._token_name = token_name
-
-    @property
-    def description(self):
-        """Gets the description of this IssueTokenRequestMetadata.  # noqa: E501
-
-        Long name or description of token (ex. Nibble)  # noqa: E501
-
-        :return: The description of this IssueTokenRequestMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this IssueTokenRequestMetadata.
-
-        Long name or description of token (ex. Nibble)  # noqa: E501
-
-        :param description: The description of this IssueTokenRequestMetadata.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def encryptions(self):
         """Gets the encryptions of this IssueTokenRequestMetadata.  # noqa: E501
 
@@ -208,29 +231,6 @@ class IssueTokenRequestMetadata(object):
         """
 
         self._rules = rules
-
-    @property
-    def issuer(self):
-        """Gets the issuer of this IssueTokenRequestMetadata.  # noqa: E501
-
-        Name of token issuer  # noqa: E501
-
-        :return: The issuer of this IssueTokenRequestMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._issuer
-
-    @issuer.setter
-    def issuer(self, issuer):
-        """Sets the issuer of this IssueTokenRequestMetadata.
-
-        Name of token issuer  # noqa: E501
-
-        :param issuer: The issuer of this IssueTokenRequestMetadata.  # noqa: E501
-        :type: str
-        """
-
-        self._issuer = issuer
 
     def to_dict(self):
         """Returns the model properties as a dict"""

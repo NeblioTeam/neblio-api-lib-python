@@ -31,51 +31,118 @@ class GetTransactionInfoResponseVin(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'txid': 'str',
+        'vout': 'float',
+        'script_sig': 'GetTransactionInfoResponseScriptSig',
         'sequence': 'float',
         'previous_output': 'GetTransactionInfoResponsePreviousOutput',
-        'script_sig': 'GetTransactionInfoResponseScriptSig',
-        'txid': 'str',
         'tokens': 'list[GetTransactionInfoResponseTokens]',
-        'value': 'float',
-        'vout': 'float'
+        'value': 'float'
     }
 
     attribute_map = {
+        'txid': 'txid',
+        'vout': 'vout',
+        'script_sig': 'scriptSig',
         'sequence': 'sequence',
         'previous_output': 'previousOutput',
-        'script_sig': 'scriptSig',
-        'txid': 'txid',
         'tokens': 'tokens',
-        'value': 'value',
-        'vout': 'vout'
+        'value': 'value'
     }
 
-    def __init__(self, sequence=None, previous_output=None, script_sig=None, txid=None, tokens=None, value=None, vout=None):  # noqa: E501
+    def __init__(self, txid=None, vout=None, script_sig=None, sequence=None, previous_output=None, tokens=None, value=None):  # noqa: E501
         """GetTransactionInfoResponseVin - a model defined in OpenAPI"""  # noqa: E501
 
+        self._txid = None
+        self._vout = None
+        self._script_sig = None
         self._sequence = None
         self._previous_output = None
-        self._script_sig = None
-        self._txid = None
         self._tokens = None
         self._value = None
-        self._vout = None
         self.discriminator = None
 
+        if txid is not None:
+            self.txid = txid
+        if vout is not None:
+            self.vout = vout
+        if script_sig is not None:
+            self.script_sig = script_sig
         if sequence is not None:
             self.sequence = sequence
         if previous_output is not None:
             self.previous_output = previous_output
-        if script_sig is not None:
-            self.script_sig = script_sig
-        if txid is not None:
-            self.txid = txid
         if tokens is not None:
             self.tokens = tokens
         if value is not None:
             self.value = value
-        if vout is not None:
-            self.vout = vout
+
+    @property
+    def txid(self):
+        """Gets the txid of this GetTransactionInfoResponseVin.  # noqa: E501
+
+        TXID of the input  # noqa: E501
+
+        :return: The txid of this GetTransactionInfoResponseVin.  # noqa: E501
+        :rtype: str
+        """
+        return self._txid
+
+    @txid.setter
+    def txid(self, txid):
+        """Sets the txid of this GetTransactionInfoResponseVin.
+
+        TXID of the input  # noqa: E501
+
+        :param txid: The txid of this GetTransactionInfoResponseVin.  # noqa: E501
+        :type: str
+        """
+
+        self._txid = txid
+
+    @property
+    def vout(self):
+        """Gets the vout of this GetTransactionInfoResponseVin.  # noqa: E501
+
+        output index  # noqa: E501
+
+        :return: The vout of this GetTransactionInfoResponseVin.  # noqa: E501
+        :rtype: float
+        """
+        return self._vout
+
+    @vout.setter
+    def vout(self, vout):
+        """Sets the vout of this GetTransactionInfoResponseVin.
+
+        output index  # noqa: E501
+
+        :param vout: The vout of this GetTransactionInfoResponseVin.  # noqa: E501
+        :type: float
+        """
+
+        self._vout = vout
+
+    @property
+    def script_sig(self):
+        """Gets the script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
+
+
+        :return: The script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
+        :rtype: GetTransactionInfoResponseScriptSig
+        """
+        return self._script_sig
+
+    @script_sig.setter
+    def script_sig(self, script_sig):
+        """Sets the script_sig of this GetTransactionInfoResponseVin.
+
+
+        :param script_sig: The script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
+        :type: GetTransactionInfoResponseScriptSig
+        """
+
+        self._script_sig = script_sig
 
     @property
     def sequence(self):
@@ -120,50 +187,6 @@ class GetTransactionInfoResponseVin(object):
         self._previous_output = previous_output
 
     @property
-    def script_sig(self):
-        """Gets the script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
-
-
-        :return: The script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
-        :rtype: GetTransactionInfoResponseScriptSig
-        """
-        return self._script_sig
-
-    @script_sig.setter
-    def script_sig(self, script_sig):
-        """Sets the script_sig of this GetTransactionInfoResponseVin.
-
-
-        :param script_sig: The script_sig of this GetTransactionInfoResponseVin.  # noqa: E501
-        :type: GetTransactionInfoResponseScriptSig
-        """
-
-        self._script_sig = script_sig
-
-    @property
-    def txid(self):
-        """Gets the txid of this GetTransactionInfoResponseVin.  # noqa: E501
-
-        TXID of the input  # noqa: E501
-
-        :return: The txid of this GetTransactionInfoResponseVin.  # noqa: E501
-        :rtype: str
-        """
-        return self._txid
-
-    @txid.setter
-    def txid(self, txid):
-        """Sets the txid of this GetTransactionInfoResponseVin.
-
-        TXID of the input  # noqa: E501
-
-        :param txid: The txid of this GetTransactionInfoResponseVin.  # noqa: E501
-        :type: str
-        """
-
-        self._txid = txid
-
-    @property
     def tokens(self):
         """Gets the tokens of this GetTransactionInfoResponseVin.  # noqa: E501
 
@@ -206,29 +229,6 @@ class GetTransactionInfoResponseVin(object):
         """
 
         self._value = value
-
-    @property
-    def vout(self):
-        """Gets the vout of this GetTransactionInfoResponseVin.  # noqa: E501
-
-        output index  # noqa: E501
-
-        :return: The vout of this GetTransactionInfoResponseVin.  # noqa: E501
-        :rtype: float
-        """
-        return self._vout
-
-    @vout.setter
-    def vout(self, vout):
-        """Sets the vout of this GetTransactionInfoResponseVin.
-
-        output index  # noqa: E501
-
-        :param vout: The vout of this GetTransactionInfoResponseVin.  # noqa: E501
-        :type: float
-        """
-
-        self._vout = vout
 
     def to_dict(self):
         """Returns the model properties as a dict"""

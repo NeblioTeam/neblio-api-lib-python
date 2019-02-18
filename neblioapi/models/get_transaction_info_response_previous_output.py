@@ -31,62 +31,41 @@ class GetTransactionInfoResponsePreviousOutput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'addresses': 'list[str]',
         'asm': 'str',
         'hex': 'str',
+        'req_sigs': 'float',
         'type': 'str',
-        'req_sigs': 'float'
+        'addresses': 'list[str]'
     }
 
     attribute_map = {
-        'addresses': 'addresses',
         'asm': 'asm',
         'hex': 'hex',
+        'req_sigs': 'reqSigs',
         'type': 'type',
-        'req_sigs': 'reqSigs'
+        'addresses': 'addresses'
     }
 
-    def __init__(self, addresses=None, asm=None, hex=None, type=None, req_sigs=None):  # noqa: E501
+    def __init__(self, asm=None, hex=None, req_sigs=None, type=None, addresses=None):  # noqa: E501
         """GetTransactionInfoResponsePreviousOutput - a model defined in OpenAPI"""  # noqa: E501
 
-        self._addresses = None
         self._asm = None
         self._hex = None
-        self._type = None
         self._req_sigs = None
+        self._type = None
+        self._addresses = None
         self.discriminator = None
 
-        if addresses is not None:
-            self.addresses = addresses
         if asm is not None:
             self.asm = asm
         if hex is not None:
             self.hex = hex
-        if type is not None:
-            self.type = type
         if req_sigs is not None:
             self.req_sigs = req_sigs
-
-    @property
-    def addresses(self):
-        """Gets the addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
-
-
-        :return: The addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._addresses
-
-    @addresses.setter
-    def addresses(self, addresses):
-        """Sets the addresses of this GetTransactionInfoResponsePreviousOutput.
-
-
-        :param addresses: The addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._addresses = addresses
+        if type is not None:
+            self.type = type
+        if addresses is not None:
+            self.addresses = addresses
 
     @property
     def asm(self):
@@ -131,6 +110,27 @@ class GetTransactionInfoResponsePreviousOutput(object):
         self._hex = hex
 
     @property
+    def req_sigs(self):
+        """Gets the req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+
+
+        :return: The req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+        :rtype: float
+        """
+        return self._req_sigs
+
+    @req_sigs.setter
+    def req_sigs(self, req_sigs):
+        """Sets the req_sigs of this GetTransactionInfoResponsePreviousOutput.
+
+
+        :param req_sigs: The req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+        :type: float
+        """
+
+        self._req_sigs = req_sigs
+
+    @property
     def type(self):
         """Gets the type of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
 
@@ -152,25 +152,25 @@ class GetTransactionInfoResponsePreviousOutput(object):
         self._type = type
 
     @property
-    def req_sigs(self):
-        """Gets the req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+    def addresses(self):
+        """Gets the addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
 
 
-        :return: The req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
-        :rtype: float
+        :return: The addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._req_sigs
+        return self._addresses
 
-    @req_sigs.setter
-    def req_sigs(self, req_sigs):
-        """Sets the req_sigs of this GetTransactionInfoResponsePreviousOutput.
+    @addresses.setter
+    def addresses(self, addresses):
+        """Sets the addresses of this GetTransactionInfoResponsePreviousOutput.
 
 
-        :param req_sigs: The req_sigs of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
-        :type: float
+        :param addresses: The addresses of this GetTransactionInfoResponsePreviousOutput.  # noqa: E501
+        :type: list[str]
         """
 
-        self._req_sigs = req_sigs
+        self._addresses = addresses
 
     def to_dict(self):
         """Returns the model properties as a dict"""

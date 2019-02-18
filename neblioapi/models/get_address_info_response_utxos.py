@@ -31,102 +31,56 @@ class GetAddressInfoResponseUtxos(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'script_pub_key': 'object',
-        'blocktime': 'float',
         'index': 'float',
         'txid': 'str',
-        'tokens': 'list[GetAddressInfoResponseTokens]',
+        'blockheight': 'float',
+        'blocktime': 'float',
+        'script_pub_key': 'object',
         'used': 'bool',
         'value': 'float',
-        'blockheight': 'float'
+        'tokens': 'list[GetAddressInfoResponseTokens]'
     }
 
     attribute_map = {
-        'script_pub_key': 'scriptPubKey',
-        'blocktime': 'blocktime',
         'index': 'index',
         'txid': 'txid',
-        'tokens': 'tokens',
+        'blockheight': 'blockheight',
+        'blocktime': 'blocktime',
+        'script_pub_key': 'scriptPubKey',
         'used': 'used',
         'value': 'value',
-        'blockheight': 'blockheight'
+        'tokens': 'tokens'
     }
 
-    def __init__(self, script_pub_key=None, blocktime=None, index=None, txid=None, tokens=None, used=None, value=None, blockheight=None):  # noqa: E501
+    def __init__(self, index=None, txid=None, blockheight=None, blocktime=None, script_pub_key=None, used=None, value=None, tokens=None):  # noqa: E501
         """GetAddressInfoResponseUtxos - a model defined in OpenAPI"""  # noqa: E501
 
-        self._script_pub_key = None
-        self._blocktime = None
         self._index = None
         self._txid = None
-        self._tokens = None
+        self._blockheight = None
+        self._blocktime = None
+        self._script_pub_key = None
         self._used = None
         self._value = None
-        self._blockheight = None
+        self._tokens = None
         self.discriminator = None
 
-        if script_pub_key is not None:
-            self.script_pub_key = script_pub_key
-        if blocktime is not None:
-            self.blocktime = blocktime
         if index is not None:
             self.index = index
         if txid is not None:
             self.txid = txid
-        if tokens is not None:
-            self.tokens = tokens
+        if blockheight is not None:
+            self.blockheight = blockheight
+        if blocktime is not None:
+            self.blocktime = blocktime
+        if script_pub_key is not None:
+            self.script_pub_key = script_pub_key
         if used is not None:
             self.used = used
         if value is not None:
             self.value = value
-        if blockheight is not None:
-            self.blockheight = blockheight
-
-    @property
-    def script_pub_key(self):
-        """Gets the script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
-
-        Object representing the scruptPubKey of the UTXO  # noqa: E501
-
-        :return: The script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :rtype: object
-        """
-        return self._script_pub_key
-
-    @script_pub_key.setter
-    def script_pub_key(self, script_pub_key):
-        """Sets the script_pub_key of this GetAddressInfoResponseUtxos.
-
-        Object representing the scruptPubKey of the UTXO  # noqa: E501
-
-        :param script_pub_key: The script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :type: object
-        """
-
-        self._script_pub_key = script_pub_key
-
-    @property
-    def blocktime(self):
-        """Gets the blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
-
-        Blocktime of the UTXO  # noqa: E501
-
-        :return: The blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :rtype: float
-        """
-        return self._blocktime
-
-    @blocktime.setter
-    def blocktime(self, blocktime):
-        """Sets the blocktime of this GetAddressInfoResponseUtxos.
-
-        Blocktime of the UTXO  # noqa: E501
-
-        :param blocktime: The blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :type: float
-        """
-
-        self._blocktime = blocktime
+        if tokens is not None:
+            self.tokens = tokens
 
     @property
     def index(self):
@@ -175,27 +129,73 @@ class GetAddressInfoResponseUtxos(object):
         self._txid = txid
 
     @property
-    def tokens(self):
-        """Gets the tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
+    def blockheight(self):
+        """Gets the blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
 
-        Array of NTP1 tokens in this UTXO.  # noqa: E501
+        Blockheight of the UTXO  # noqa: E501
 
-        :return: The tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :rtype: list[GetAddressInfoResponseTokens]
+        :return: The blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :rtype: float
         """
-        return self._tokens
+        return self._blockheight
 
-    @tokens.setter
-    def tokens(self, tokens):
-        """Sets the tokens of this GetAddressInfoResponseUtxos.
+    @blockheight.setter
+    def blockheight(self, blockheight):
+        """Sets the blockheight of this GetAddressInfoResponseUtxos.
 
-        Array of NTP1 tokens in this UTXO.  # noqa: E501
+        Blockheight of the UTXO  # noqa: E501
 
-        :param tokens: The tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :type: list[GetAddressInfoResponseTokens]
+        :param blockheight: The blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :type: float
         """
 
-        self._tokens = tokens
+        self._blockheight = blockheight
+
+    @property
+    def blocktime(self):
+        """Gets the blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
+
+        Blocktime of the UTXO  # noqa: E501
+
+        :return: The blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :rtype: float
+        """
+        return self._blocktime
+
+    @blocktime.setter
+    def blocktime(self, blocktime):
+        """Sets the blocktime of this GetAddressInfoResponseUtxos.
+
+        Blocktime of the UTXO  # noqa: E501
+
+        :param blocktime: The blocktime of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :type: float
+        """
+
+        self._blocktime = blocktime
+
+    @property
+    def script_pub_key(self):
+        """Gets the script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
+
+        Object representing the scruptPubKey of the UTXO  # noqa: E501
+
+        :return: The script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :rtype: object
+        """
+        return self._script_pub_key
+
+    @script_pub_key.setter
+    def script_pub_key(self, script_pub_key):
+        """Sets the script_pub_key of this GetAddressInfoResponseUtxos.
+
+        Object representing the scruptPubKey of the UTXO  # noqa: E501
+
+        :param script_pub_key: The script_pub_key of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :type: object
+        """
+
+        self._script_pub_key = script_pub_key
 
     @property
     def used(self):
@@ -244,27 +244,27 @@ class GetAddressInfoResponseUtxos(object):
         self._value = value
 
     @property
-    def blockheight(self):
-        """Gets the blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
+    def tokens(self):
+        """Gets the tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
 
-        Blockheight of the UTXO  # noqa: E501
+        Array of NTP1 tokens in this UTXO.  # noqa: E501
 
-        :return: The blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :rtype: float
+        :return: The tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :rtype: list[GetAddressInfoResponseTokens]
         """
-        return self._blockheight
+        return self._tokens
 
-    @blockheight.setter
-    def blockheight(self, blockheight):
-        """Sets the blockheight of this GetAddressInfoResponseUtxos.
+    @tokens.setter
+    def tokens(self, tokens):
+        """Sets the tokens of this GetAddressInfoResponseUtxos.
 
-        Blockheight of the UTXO  # noqa: E501
+        Array of NTP1 tokens in this UTXO.  # noqa: E501
 
-        :param blockheight: The blockheight of this GetAddressInfoResponseUtxos.  # noqa: E501
-        :type: float
+        :param tokens: The tokens of this GetAddressInfoResponseUtxos.  # noqa: E501
+        :type: list[GetAddressInfoResponseTokens]
         """
 
-        self._blockheight = blockheight
+        self._tokens = tokens
 
     def to_dict(self):
         """Returns the model properties as a dict"""

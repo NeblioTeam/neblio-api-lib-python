@@ -31,82 +31,36 @@ class IssueTokenRequestMetadataEncryptions(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'format': 'str',
-        'type': 'str',
         'key': 'str',
-        'pubkey': 'str'
+        'pubkey': 'str',
+        'format': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'format': 'format',
-        'type': 'type',
         'key': 'key',
-        'pubkey': 'pubkey'
+        'pubkey': 'pubkey',
+        'format': 'format',
+        'type': 'type'
     }
 
-    def __init__(self, format=None, type=None, key=None, pubkey=None):  # noqa: E501
+    def __init__(self, key=None, pubkey=None, format=None, type=None):  # noqa: E501
         """IssueTokenRequestMetadataEncryptions - a model defined in OpenAPI"""  # noqa: E501
 
-        self._format = None
-        self._type = None
         self._key = None
         self._pubkey = None
+        self._format = None
+        self._type = None
         self.discriminator = None
 
-        if format is not None:
-            self.format = format
-        if type is not None:
-            self.type = type
         if key is not None:
             self.key = key
         if pubkey is not None:
             self.pubkey = pubkey
-
-    @property
-    def format(self):
-        """Gets the format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-
-        key format (pem or der)  # noqa: E501
-
-        :return: The format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-        :rtype: str
-        """
-        return self._format
-
-    @format.setter
-    def format(self, format):
-        """Sets the format of this IssueTokenRequestMetadataEncryptions.
-
-        key format (pem or der)  # noqa: E501
-
-        :param format: The format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-        :type: str
-        """
-
-        self._format = format
-
-    @property
-    def type(self):
-        """Gets the type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-
-        pkcs1 or pkcs8  # noqa: E501
-
-        :return: The type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this IssueTokenRequestMetadataEncryptions.
-
-        pkcs1 or pkcs8  # noqa: E501
-
-        :param type: The type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if format is not None:
+            self.format = format
+        if type is not None:
+            self.type = type
 
     @property
     def key(self):
@@ -153,6 +107,52 @@ class IssueTokenRequestMetadataEncryptions(object):
         """
 
         self._pubkey = pubkey
+
+    @property
+    def format(self):
+        """Gets the format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+
+        key format (pem or der)  # noqa: E501
+
+        :return: The format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this IssueTokenRequestMetadataEncryptions.
+
+        key format (pem or der)  # noqa: E501
+
+        :param format: The format of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+        :type: str
+        """
+
+        self._format = format
+
+    @property
+    def type(self):
+        """Gets the type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+
+        pkcs1 or pkcs8  # noqa: E501
+
+        :return: The type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this IssueTokenRequestMetadataEncryptions.
+
+        pkcs1 or pkcs8  # noqa: E501
+
+        :param type: The type of this IssueTokenRequestMetadataEncryptions.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

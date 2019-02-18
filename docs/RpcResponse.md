@@ -1,13 +1,11 @@
-# GetTransactionInfoResponsePreviousOutput
+# RpcResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**asm** | **str** |  | [optional] 
-**hex** | **str** |  | [optional] 
-**req_sigs** | **float** |  | [optional] 
-**type** | **str** |  | [optional] 
-**addresses** | **list[str]** |  | [optional] 
+**result** | [**object**](.md) | Object containing the response output. | [optional] 
+**id** | **str** | Identifier of RCP caller | [optional] 
+**error** | [**object**](.md) | Object containing any error information. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

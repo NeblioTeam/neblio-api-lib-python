@@ -31,47 +31,26 @@ class GetTokenHoldersResponseHolders(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'amount': 'float',
-        'address': 'str'
+        'address': 'str',
+        'amount': 'float'
     }
 
     attribute_map = {
-        'amount': 'amount',
-        'address': 'address'
+        'address': 'address',
+        'amount': 'amount'
     }
 
-    def __init__(self, amount=None, address=None):  # noqa: E501
+    def __init__(self, address=None, amount=None):  # noqa: E501
         """GetTokenHoldersResponseHolders - a model defined in OpenAPI"""  # noqa: E501
 
-        self._amount = None
         self._address = None
+        self._amount = None
         self.discriminator = None
 
-        if amount is not None:
-            self.amount = amount
         if address is not None:
             self.address = address
-
-    @property
-    def amount(self):
-        """Gets the amount of this GetTokenHoldersResponseHolders.  # noqa: E501
-
-
-        :return: The amount of this GetTokenHoldersResponseHolders.  # noqa: E501
-        :rtype: float
-        """
-        return self._amount
-
-    @amount.setter
-    def amount(self, amount):
-        """Sets the amount of this GetTokenHoldersResponseHolders.
-
-
-        :param amount: The amount of this GetTokenHoldersResponseHolders.  # noqa: E501
-        :type: float
-        """
-
-        self._amount = amount
+        if amount is not None:
+            self.amount = amount
 
     @property
     def address(self):
@@ -93,6 +72,27 @@ class GetTokenHoldersResponseHolders(object):
         """
 
         self._address = address
+
+    @property
+    def amount(self):
+        """Gets the amount of this GetTokenHoldersResponseHolders.  # noqa: E501
+
+
+        :return: The amount of this GetTokenHoldersResponseHolders.  # noqa: E501
+        :rtype: float
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this GetTokenHoldersResponseHolders.
+
+
+        :param amount: The amount of this GetTokenHoldersResponseHolders.  # noqa: E501
+        :type: float
+        """
+
+        self._amount = amount
 
     def to_dict(self):
         """Returns the model properties as a dict"""

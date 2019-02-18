@@ -31,167 +31,56 @@ class GetTransactionInfoResponseVout(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'script_pub_key': 'GetTransactionInfoResponsePreviousOutput',
-        'used_blockheight': 'float',
-        'used_txid': 'str',
-        'tokens': 'list[GetTransactionInfoResponseTokens]',
-        'used': 'bool',
         'value': 'float',
         'n': 'float',
-        'blockheight': 'float'
+        'script_pub_key': 'GetTransactionInfoResponsePreviousOutput',
+        'tokens': 'list[GetTransactionInfoResponseTokens]',
+        'used': 'bool',
+        'blockheight': 'float',
+        'used_blockheight': 'float',
+        'used_txid': 'str'
     }
 
     attribute_map = {
-        'script_pub_key': 'scriptPubKey',
-        'used_blockheight': 'usedBlockheight',
-        'used_txid': 'usedTxid',
-        'tokens': 'tokens',
-        'used': 'used',
         'value': 'value',
         'n': 'n',
-        'blockheight': 'blockheight'
+        'script_pub_key': 'scriptPubKey',
+        'tokens': 'tokens',
+        'used': 'used',
+        'blockheight': 'blockheight',
+        'used_blockheight': 'usedBlockheight',
+        'used_txid': 'usedTxid'
     }
 
-    def __init__(self, script_pub_key=None, used_blockheight=None, used_txid=None, tokens=None, used=None, value=None, n=None, blockheight=None):  # noqa: E501
+    def __init__(self, value=None, n=None, script_pub_key=None, tokens=None, used=None, blockheight=None, used_blockheight=None, used_txid=None):  # noqa: E501
         """GetTransactionInfoResponseVout - a model defined in OpenAPI"""  # noqa: E501
 
-        self._script_pub_key = None
-        self._used_blockheight = None
-        self._used_txid = None
-        self._tokens = None
-        self._used = None
         self._value = None
         self._n = None
+        self._script_pub_key = None
+        self._tokens = None
+        self._used = None
         self._blockheight = None
+        self._used_blockheight = None
+        self._used_txid = None
         self.discriminator = None
 
-        if script_pub_key is not None:
-            self.script_pub_key = script_pub_key
-        if used_blockheight is not None:
-            self.used_blockheight = used_blockheight
-        if used_txid is not None:
-            self.used_txid = used_txid
-        if tokens is not None:
-            self.tokens = tokens
-        if used is not None:
-            self.used = used
         if value is not None:
             self.value = value
         if n is not None:
             self.n = n
+        if script_pub_key is not None:
+            self.script_pub_key = script_pub_key
+        if tokens is not None:
+            self.tokens = tokens
+        if used is not None:
+            self.used = used
         if blockheight is not None:
             self.blockheight = blockheight
-
-    @property
-    def script_pub_key(self):
-        """Gets the script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
-
-
-        :return: The script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
-        :rtype: GetTransactionInfoResponsePreviousOutput
-        """
-        return self._script_pub_key
-
-    @script_pub_key.setter
-    def script_pub_key(self, script_pub_key):
-        """Sets the script_pub_key of this GetTransactionInfoResponseVout.
-
-
-        :param script_pub_key: The script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
-        :type: GetTransactionInfoResponsePreviousOutput
-        """
-
-        self._script_pub_key = script_pub_key
-
-    @property
-    def used_blockheight(self):
-        """Gets the used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
-
-        Blockheight this output was used in  # noqa: E501
-
-        :return: The used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
-        :rtype: float
-        """
-        return self._used_blockheight
-
-    @used_blockheight.setter
-    def used_blockheight(self, used_blockheight):
-        """Sets the used_blockheight of this GetTransactionInfoResponseVout.
-
-        Blockheight this output was used in  # noqa: E501
-
-        :param used_blockheight: The used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
-        :type: float
-        """
-
-        self._used_blockheight = used_blockheight
-
-    @property
-    def used_txid(self):
-        """Gets the used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
-
-        TXID this output was used in  # noqa: E501
-
-        :return: The used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
-        :rtype: str
-        """
-        return self._used_txid
-
-    @used_txid.setter
-    def used_txid(self, used_txid):
-        """Sets the used_txid of this GetTransactionInfoResponseVout.
-
-        TXID this output was used in  # noqa: E501
-
-        :param used_txid: The used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
-        :type: str
-        """
-
-        self._used_txid = used_txid
-
-    @property
-    def tokens(self):
-        """Gets the tokens of this GetTransactionInfoResponseVout.  # noqa: E501
-
-
-        :return: The tokens of this GetTransactionInfoResponseVout.  # noqa: E501
-        :rtype: list[GetTransactionInfoResponseTokens]
-        """
-        return self._tokens
-
-    @tokens.setter
-    def tokens(self, tokens):
-        """Sets the tokens of this GetTransactionInfoResponseVout.
-
-
-        :param tokens: The tokens of this GetTransactionInfoResponseVout.  # noqa: E501
-        :type: list[GetTransactionInfoResponseTokens]
-        """
-
-        self._tokens = tokens
-
-    @property
-    def used(self):
-        """Gets the used of this GetTransactionInfoResponseVout.  # noqa: E501
-
-        Whether this output has now been used  # noqa: E501
-
-        :return: The used of this GetTransactionInfoResponseVout.  # noqa: E501
-        :rtype: bool
-        """
-        return self._used
-
-    @used.setter
-    def used(self, used):
-        """Sets the used of this GetTransactionInfoResponseVout.
-
-        Whether this output has now been used  # noqa: E501
-
-        :param used: The used of this GetTransactionInfoResponseVout.  # noqa: E501
-        :type: bool
-        """
-
-        self._used = used
+        if used_blockheight is not None:
+            self.used_blockheight = used_blockheight
+        if used_txid is not None:
+            self.used_txid = used_txid
 
     @property
     def value(self):
@@ -240,6 +129,71 @@ class GetTransactionInfoResponseVout(object):
         self._n = n
 
     @property
+    def script_pub_key(self):
+        """Gets the script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
+
+
+        :return: The script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
+        :rtype: GetTransactionInfoResponsePreviousOutput
+        """
+        return self._script_pub_key
+
+    @script_pub_key.setter
+    def script_pub_key(self, script_pub_key):
+        """Sets the script_pub_key of this GetTransactionInfoResponseVout.
+
+
+        :param script_pub_key: The script_pub_key of this GetTransactionInfoResponseVout.  # noqa: E501
+        :type: GetTransactionInfoResponsePreviousOutput
+        """
+
+        self._script_pub_key = script_pub_key
+
+    @property
+    def tokens(self):
+        """Gets the tokens of this GetTransactionInfoResponseVout.  # noqa: E501
+
+
+        :return: The tokens of this GetTransactionInfoResponseVout.  # noqa: E501
+        :rtype: list[GetTransactionInfoResponseTokens]
+        """
+        return self._tokens
+
+    @tokens.setter
+    def tokens(self, tokens):
+        """Sets the tokens of this GetTransactionInfoResponseVout.
+
+
+        :param tokens: The tokens of this GetTransactionInfoResponseVout.  # noqa: E501
+        :type: list[GetTransactionInfoResponseTokens]
+        """
+
+        self._tokens = tokens
+
+    @property
+    def used(self):
+        """Gets the used of this GetTransactionInfoResponseVout.  # noqa: E501
+
+        Whether this output has now been used  # noqa: E501
+
+        :return: The used of this GetTransactionInfoResponseVout.  # noqa: E501
+        :rtype: bool
+        """
+        return self._used
+
+    @used.setter
+    def used(self, used):
+        """Sets the used of this GetTransactionInfoResponseVout.
+
+        Whether this output has now been used  # noqa: E501
+
+        :param used: The used of this GetTransactionInfoResponseVout.  # noqa: E501
+        :type: bool
+        """
+
+        self._used = used
+
+    @property
     def blockheight(self):
         """Gets the blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
 
@@ -261,6 +215,52 @@ class GetTransactionInfoResponseVout(object):
         """
 
         self._blockheight = blockheight
+
+    @property
+    def used_blockheight(self):
+        """Gets the used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
+
+        Blockheight this output was used in  # noqa: E501
+
+        :return: The used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_blockheight
+
+    @used_blockheight.setter
+    def used_blockheight(self, used_blockheight):
+        """Sets the used_blockheight of this GetTransactionInfoResponseVout.
+
+        Blockheight this output was used in  # noqa: E501
+
+        :param used_blockheight: The used_blockheight of this GetTransactionInfoResponseVout.  # noqa: E501
+        :type: float
+        """
+
+        self._used_blockheight = used_blockheight
+
+    @property
+    def used_txid(self):
+        """Gets the used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
+
+        TXID this output was used in  # noqa: E501
+
+        :return: The used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
+        :rtype: str
+        """
+        return self._used_txid
+
+    @used_txid.setter
+    def used_txid(self, used_txid):
+        """Sets the used_txid of this GetTransactionInfoResponseVout.
+
+        TXID this output was used in  # noqa: E501
+
+        :param used_txid: The used_txid of this GetTransactionInfoResponseVout.  # noqa: E501
+        :type: str
+        """
+
+        self._used_txid = used_txid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

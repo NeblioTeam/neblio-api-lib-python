@@ -31,57 +31,36 @@ class GetTokenMetadataResponseMetadataOfIssuanceData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_data': 'GetTokenMetadataResponseMetadataOfIssuanceDataUserData',
         'token_name': 'str',
+        'issuer': 'str',
         'description': 'str',
-        'issuer': 'str'
+        'user_data': 'GetTokenMetadataResponseMetadataOfIssuanceDataUserData'
     }
 
     attribute_map = {
-        'user_data': 'userData',
         'token_name': 'tokenName',
+        'issuer': 'issuer',
         'description': 'description',
-        'issuer': 'issuer'
+        'user_data': 'userData'
     }
 
-    def __init__(self, user_data=None, token_name=None, description=None, issuer=None):  # noqa: E501
+    def __init__(self, token_name=None, issuer=None, description=None, user_data=None):  # noqa: E501
         """GetTokenMetadataResponseMetadataOfIssuanceData - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_data = None
         self._token_name = None
-        self._description = None
         self._issuer = None
+        self._description = None
+        self._user_data = None
         self.discriminator = None
 
-        if user_data is not None:
-            self.user_data = user_data
         if token_name is not None:
             self.token_name = token_name
-        if description is not None:
-            self.description = description
         if issuer is not None:
             self.issuer = issuer
-
-    @property
-    def user_data(self):
-        """Gets the user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
-
-
-        :return: The user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
-        :rtype: GetTokenMetadataResponseMetadataOfIssuanceDataUserData
-        """
-        return self._user_data
-
-    @user_data.setter
-    def user_data(self, user_data):
-        """Sets the user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.
-
-
-        :param user_data: The user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
-        :type: GetTokenMetadataResponseMetadataOfIssuanceDataUserData
-        """
-
-        self._user_data = user_data
+        if description is not None:
+            self.description = description
+        if user_data is not None:
+            self.user_data = user_data
 
     @property
     def token_name(self):
@@ -107,6 +86,29 @@ class GetTokenMetadataResponseMetadataOfIssuanceData(object):
         self._token_name = token_name
 
     @property
+    def issuer(self):
+        """Gets the issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+
+        Name of token issuer  # noqa: E501
+
+        :return: The issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+        :rtype: str
+        """
+        return self._issuer
+
+    @issuer.setter
+    def issuer(self, issuer):
+        """Sets the issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.
+
+        Name of token issuer  # noqa: E501
+
+        :param issuer: The issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+        :type: str
+        """
+
+        self._issuer = issuer
+
+    @property
     def description(self):
         """Gets the description of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
 
@@ -130,27 +132,25 @@ class GetTokenMetadataResponseMetadataOfIssuanceData(object):
         self._description = description
 
     @property
-    def issuer(self):
-        """Gets the issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+    def user_data(self):
+        """Gets the user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
 
-        Name of token issuer  # noqa: E501
 
-        :return: The issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
-        :rtype: str
+        :return: The user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+        :rtype: GetTokenMetadataResponseMetadataOfIssuanceDataUserData
         """
-        return self._issuer
+        return self._user_data
 
-    @issuer.setter
-    def issuer(self, issuer):
-        """Sets the issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.
+    @user_data.setter
+    def user_data(self, user_data):
+        """Sets the user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.
 
-        Name of token issuer  # noqa: E501
 
-        :param issuer: The issuer of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
-        :type: str
+        :param user_data: The user_data of this GetTokenMetadataResponseMetadataOfIssuanceData.  # noqa: E501
+        :type: GetTokenMetadataResponseMetadataOfIssuanceDataUserData
         """
 
-        self._issuer = issuer
+        self._user_data = user_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

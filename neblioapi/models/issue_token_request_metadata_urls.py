@@ -31,59 +31,36 @@ class IssueTokenRequestMetadataUrls(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'data_hash': 'str',
         'name': 'str',
+        'url': 'str',
         'mime_type': 'str',
-        'url': 'str'
+        'data_hash': 'str'
     }
 
     attribute_map = {
-        'data_hash': 'dataHash',
         'name': 'name',
+        'url': 'url',
         'mime_type': 'mimeType',
-        'url': 'url'
+        'data_hash': 'dataHash'
     }
 
-    def __init__(self, data_hash=None, name=None, mime_type=None, url=None):  # noqa: E501
+    def __init__(self, name=None, url=None, mime_type=None, data_hash=None):  # noqa: E501
         """IssueTokenRequestMetadataUrls - a model defined in OpenAPI"""  # noqa: E501
 
-        self._data_hash = None
         self._name = None
-        self._mime_type = None
         self._url = None
+        self._mime_type = None
+        self._data_hash = None
         self.discriminator = None
 
-        if data_hash is not None:
-            self.data_hash = data_hash
         if name is not None:
             self.name = name
-        if mime_type is not None:
-            self.mime_type = mime_type
         if url is not None:
             self.url = url
-
-    @property
-    def data_hash(self):
-        """Gets the data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
-
-        Hash of data at the URL, used for verification  # noqa: E501
-
-        :return: The data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_hash
-
-    @data_hash.setter
-    def data_hash(self, data_hash):
-        """Sets the data_hash of this IssueTokenRequestMetadataUrls.
-
-        Hash of data at the URL, used for verification  # noqa: E501
-
-        :param data_hash: The data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
-        :type: str
-        """
-
-        self._data_hash = data_hash
+        if mime_type is not None:
+            self.mime_type = mime_type
+        if data_hash is not None:
+            self.data_hash = data_hash
 
     @property
     def name(self):
@@ -109,6 +86,29 @@ class IssueTokenRequestMetadataUrls(object):
         self._name = name
 
     @property
+    def url(self):
+        """Gets the url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+
+        Actual URL  # noqa: E501
+
+        :return: The url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this IssueTokenRequestMetadataUrls.
+
+        Actual URL  # noqa: E501
+
+        :param url: The url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
     def mime_type(self):
         """Gets the mime_type of this IssueTokenRequestMetadataUrls.  # noqa: E501
 
@@ -132,27 +132,27 @@ class IssueTokenRequestMetadataUrls(object):
         self._mime_type = mime_type
 
     @property
-    def url(self):
-        """Gets the url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+    def data_hash(self):
+        """Gets the data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
 
-        Actual URL  # noqa: E501
+        Hash of data at the URL, used for verification  # noqa: E501
 
-        :return: The url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+        :return: The data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
         :rtype: str
         """
-        return self._url
+        return self._data_hash
 
-    @url.setter
-    def url(self, url):
-        """Sets the url of this IssueTokenRequestMetadataUrls.
+    @data_hash.setter
+    def data_hash(self, data_hash):
+        """Sets the data_hash of this IssueTokenRequestMetadataUrls.
 
-        Actual URL  # noqa: E501
+        Hash of data at the URL, used for verification  # noqa: E501
 
-        :param url: The url of this IssueTokenRequestMetadataUrls.  # noqa: E501
+        :param data_hash: The data_hash of this IssueTokenRequestMetadataUrls.  # noqa: E501
         :type: str
         """
 
-        self._url = url
+        self._data_hash = data_hash
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **testnet_broadcast_tx**
-> BroadcastTxResponse testnet_broadcast_tx(body)
+> BroadcastTxResponse testnet_broadcast_tx(broadcast_tx_request)
 
 Broadcasts a signed raw transaction to the network
 
@@ -34,11 +34,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = neblioapi.TestnetNTP1Api()
-body = neblioapi.BroadcastTxRequest() # BroadcastTxRequest | Object representing a transaction to broadcast
+broadcast_tx_request = neblioapi.BroadcastTxRequest() # BroadcastTxRequest | Object representing a transaction to broadcast
 
 try:
     # Broadcasts a signed raw transaction to the network
-    api_response = api_instance.testnet_broadcast_tx(body)
+    api_response = api_instance.testnet_broadcast_tx(broadcast_tx_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_broadcast_tx: %s\n" % e)
@@ -48,7 +48,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BroadcastTxRequest**](BroadcastTxRequest.md)| Object representing a transaction to broadcast | 
+ **broadcast_tx_request** | [**BroadcastTxRequest**](BroadcastTxRequest.md)| Object representing a transaction to broadcast | 
 
 ### Return type
 
@@ -66,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testnet_burn_token**
-> BurnTokenResponse testnet_burn_token(body)
+> BurnTokenResponse testnet_burn_token(burn_token_request)
 
 Builds a transaction that burns an NTP1 Token
 
@@ -83,11 +83,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = neblioapi.TestnetNTP1Api()
-body = neblioapi.BurnTokenRequest() # BurnTokenRequest | Object representing the token to be burned
+burn_token_request = neblioapi.BurnTokenRequest() # BurnTokenRequest | Object representing the token to be burned
 
 try:
     # Builds a transaction that burns an NTP1 Token
-    api_response = api_instance.testnet_burn_token(body)
+    api_response = api_instance.testnet_burn_token(burn_token_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_burn_token: %s\n" % e)
@@ -97,7 +97,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BurnTokenRequest**](BurnTokenRequest.md)| Object representing the token to be burned | 
+ **burn_token_request** | [**BurnTokenRequest**](BurnTokenRequest.md)| Object representing the token to be burned | 
 
 ### Return type
 
@@ -411,7 +411,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testnet_issue_token**
-> IssueTokenResponse testnet_issue_token(body)
+> IssueTokenResponse testnet_issue_token(issue_token_request)
 
 Builds a transaction that issues a new NTP1 Token
 
@@ -428,11 +428,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = neblioapi.TestnetNTP1Api()
-body = neblioapi.IssueTokenRequest() # IssueTokenRequest | Object representing the token to be created
+issue_token_request = neblioapi.IssueTokenRequest() # IssueTokenRequest | Object representing the token to be created
 
 try:
     # Builds a transaction that issues a new NTP1 Token
-    api_response = api_instance.testnet_issue_token(body)
+    api_response = api_instance.testnet_issue_token(issue_token_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_issue_token: %s\n" % e)
@@ -442,7 +442,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IssueTokenRequest**](IssueTokenRequest.md)| Object representing the token to be created | 
+ **issue_token_request** | [**IssueTokenRequest**](IssueTokenRequest.md)| Object representing the token to be created | 
 
 ### Return type
 
@@ -460,7 +460,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testnet_send_token**
-> SendTokenResponse testnet_send_token(body)
+> SendTokenResponse testnet_send_token(send_token_request)
 
 Builds a transaction that sends an NTP1 Token
 
@@ -477,11 +477,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = neblioapi.TestnetNTP1Api()
-body = neblioapi.SendTokenRequest() # SendTokenRequest | Object representing the token to be sent
+send_token_request = neblioapi.SendTokenRequest() # SendTokenRequest | Object representing the token to be sent
 
 try:
     # Builds a transaction that sends an NTP1 Token
-    api_response = api_instance.testnet_send_token(body)
+    api_response = api_instance.testnet_send_token(send_token_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_send_token: %s\n" % e)
@@ -491,7 +491,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SendTokenRequest**](SendTokenRequest.md)| Object representing the token to be sent | 
+ **send_token_request** | [**SendTokenRequest**](SendTokenRequest.md)| Object representing the token to be sent | 
 
 ### Return type
 

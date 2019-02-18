@@ -658,7 +658,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_tx**
-> BroadcastTxResponse send_tx(body)
+> BroadcastTxResponse send_tx(send_tx_request)
 
 Broadcasts a signed raw transaction to the network (not NTP1 specific)
 
@@ -675,11 +675,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = neblioapi.InsightApi()
-body = neblioapi.SendTxRequest() # SendTxRequest | Object representing a transaction to broadcast
+send_tx_request = neblioapi.SendTxRequest() # SendTxRequest | Object representing a transaction to broadcast
 
 try:
     # Broadcasts a signed raw transaction to the network (not NTP1 specific)
-    api_response = api_instance.send_tx(body)
+    api_response = api_instance.send_tx(send_tx_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InsightApi->send_tx: %s\n" % e)
@@ -689,7 +689,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SendTxRequest**](SendTxRequest.md)| Object representing a transaction to broadcast | 
+ **send_tx_request** | [**SendTxRequest**](SendTxRequest.md)| Object representing a transaction to broadcast | 
 
 ### Return type
 

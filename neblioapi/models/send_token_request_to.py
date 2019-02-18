@@ -31,54 +31,31 @@ class SendTokenRequestTo(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'amount': 'float',
         'address': 'str',
+        'amount': 'float',
         'token_id': 'str'
     }
 
     attribute_map = {
-        'amount': 'amount',
         'address': 'address',
+        'amount': 'amount',
         'token_id': 'tokenId'
     }
 
-    def __init__(self, amount=None, address=None, token_id=None):  # noqa: E501
+    def __init__(self, address=None, amount=None, token_id=None):  # noqa: E501
         """SendTokenRequestTo - a model defined in OpenAPI"""  # noqa: E501
 
-        self._amount = None
         self._address = None
+        self._amount = None
         self._token_id = None
         self.discriminator = None
 
-        if amount is not None:
-            self.amount = amount
         if address is not None:
             self.address = address
+        if amount is not None:
+            self.amount = amount
         if token_id is not None:
             self.token_id = token_id
-
-    @property
-    def amount(self):
-        """Gets the amount of this SendTokenRequestTo.  # noqa: E501
-
-        Number of tokens to send  # noqa: E501
-
-        :return: The amount of this SendTokenRequestTo.  # noqa: E501
-        :rtype: float
-        """
-        return self._amount
-
-    @amount.setter
-    def amount(self, amount):
-        """Sets the amount of this SendTokenRequestTo.
-
-        Number of tokens to send  # noqa: E501
-
-        :param amount: The amount of this SendTokenRequestTo.  # noqa: E501
-        :type: float
-        """
-
-        self._amount = amount
 
     @property
     def address(self):
@@ -102,6 +79,29 @@ class SendTokenRequestTo(object):
         """
 
         self._address = address
+
+    @property
+    def amount(self):
+        """Gets the amount of this SendTokenRequestTo.  # noqa: E501
+
+        Number of tokens to send  # noqa: E501
+
+        :return: The amount of this SendTokenRequestTo.  # noqa: E501
+        :rtype: float
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this SendTokenRequestTo.
+
+        Number of tokens to send  # noqa: E501
+
+        :param amount: The amount of this SendTokenRequestTo.  # noqa: E501
+        :type: float
+        """
+
+        self._amount = amount
 
     @property
     def token_id(self):

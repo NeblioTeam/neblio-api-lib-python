@@ -32,39 +32,39 @@ class NTP1Api(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def broadcast_tx(self, body, **kwargs):  # noqa: E501
+    def broadcast_tx(self, broadcast_tx_request, **kwargs):  # noqa: E501
         """Broadcasts a signed raw transaction to the network  # noqa: E501
 
         Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.broadcast_tx(body, async_req=True)
+        >>> thread = api.broadcast_tx(broadcast_tx_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BroadcastTxRequest body: Object representing a transaction to broadcast (required)
+        :param BroadcastTxRequest broadcast_tx_request: Object representing a transaction to broadcast (required)
         :return: BroadcastTxResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.broadcast_tx_with_http_info(body, **kwargs)  # noqa: E501
+            return self.broadcast_tx_with_http_info(broadcast_tx_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.broadcast_tx_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.broadcast_tx_with_http_info(broadcast_tx_request, **kwargs)  # noqa: E501
             return data
 
-    def broadcast_tx_with_http_info(self, body, **kwargs):  # noqa: E501
+    def broadcast_tx_with_http_info(self, broadcast_tx_request, **kwargs):  # noqa: E501
         """Broadcasts a signed raw transaction to the network  # noqa: E501
 
         Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.broadcast_tx_with_http_info(body, async_req=True)
+        >>> thread = api.broadcast_tx_with_http_info(broadcast_tx_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BroadcastTxRequest body: Object representing a transaction to broadcast (required)
+        :param BroadcastTxRequest broadcast_tx_request: Object representing a transaction to broadcast (required)
         :return: BroadcastTxResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -72,7 +72,7 @@ class NTP1Api(object):
 
         local_var_params = locals()
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['broadcast_tx_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -86,10 +86,10 @@ class NTP1Api(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in local_var_params or
-                local_var_params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `broadcast_tx`")  # noqa: E501
+        # verify the required parameter 'broadcast_tx_request' is set
+        if ('broadcast_tx_request' not in local_var_params or
+                local_var_params['broadcast_tx_request'] is None):
+            raise ValueError("Missing the required parameter `broadcast_tx_request` when calling `broadcast_tx`")  # noqa: E501
 
         collection_formats = {}
 
@@ -103,8 +103,8 @@ class NTP1Api(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in local_var_params:
-            body_params = local_var_params['body']
+        if 'broadcast_tx_request' in local_var_params:
+            body_params = local_var_params['broadcast_tx_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -132,39 +132,39 @@ class NTP1Api(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def burn_token(self, body, **kwargs):  # noqa: E501
+    def burn_token(self, burn_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that burns an NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.burn_token(body, async_req=True)
+        >>> thread = api.burn_token(burn_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BurnTokenRequest body: Object representing the token to be burned (required)
+        :param BurnTokenRequest burn_token_request: Object representing the token to be burned (required)
         :return: BurnTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.burn_token_with_http_info(body, **kwargs)  # noqa: E501
+            return self.burn_token_with_http_info(burn_token_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.burn_token_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.burn_token_with_http_info(burn_token_request, **kwargs)  # noqa: E501
             return data
 
-    def burn_token_with_http_info(self, body, **kwargs):  # noqa: E501
+    def burn_token_with_http_info(self, burn_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that burns an NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.burn_token_with_http_info(body, async_req=True)
+        >>> thread = api.burn_token_with_http_info(burn_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param BurnTokenRequest body: Object representing the token to be burned (required)
+        :param BurnTokenRequest burn_token_request: Object representing the token to be burned (required)
         :return: BurnTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -172,7 +172,7 @@ class NTP1Api(object):
 
         local_var_params = locals()
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['burn_token_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -186,10 +186,10 @@ class NTP1Api(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in local_var_params or
-                local_var_params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `burn_token`")  # noqa: E501
+        # verify the required parameter 'burn_token_request' is set
+        if ('burn_token_request' not in local_var_params or
+                local_var_params['burn_token_request'] is None):
+            raise ValueError("Missing the required parameter `burn_token_request` when calling `burn_token`")  # noqa: E501
 
         collection_formats = {}
 
@@ -203,8 +203,8 @@ class NTP1Api(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in local_var_params:
-            body_params = local_var_params['body']
+        if 'burn_token_request' in local_var_params:
+            body_params = local_var_params['burn_token_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -816,39 +816,39 @@ class NTP1Api(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def issue_token(self, body, **kwargs):  # noqa: E501
+    def issue_token(self, issue_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that issues a new NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.issue_token(body, async_req=True)
+        >>> thread = api.issue_token(issue_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param IssueTokenRequest body: Object representing the token to be created (required)
+        :param IssueTokenRequest issue_token_request: Object representing the token to be created (required)
         :return: IssueTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.issue_token_with_http_info(body, **kwargs)  # noqa: E501
+            return self.issue_token_with_http_info(issue_token_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.issue_token_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.issue_token_with_http_info(issue_token_request, **kwargs)  # noqa: E501
             return data
 
-    def issue_token_with_http_info(self, body, **kwargs):  # noqa: E501
+    def issue_token_with_http_info(self, issue_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that issues a new NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.issue_token_with_http_info(body, async_req=True)
+        >>> thread = api.issue_token_with_http_info(issue_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param IssueTokenRequest body: Object representing the token to be created (required)
+        :param IssueTokenRequest issue_token_request: Object representing the token to be created (required)
         :return: IssueTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -856,7 +856,7 @@ class NTP1Api(object):
 
         local_var_params = locals()
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['issue_token_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -870,10 +870,10 @@ class NTP1Api(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in local_var_params or
-                local_var_params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `issue_token`")  # noqa: E501
+        # verify the required parameter 'issue_token_request' is set
+        if ('issue_token_request' not in local_var_params or
+                local_var_params['issue_token_request'] is None):
+            raise ValueError("Missing the required parameter `issue_token_request` when calling `issue_token`")  # noqa: E501
 
         collection_formats = {}
 
@@ -887,8 +887,8 @@ class NTP1Api(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in local_var_params:
-            body_params = local_var_params['body']
+        if 'issue_token_request' in local_var_params:
+            body_params = local_var_params['issue_token_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -916,39 +916,39 @@ class NTP1Api(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def send_token(self, body, **kwargs):  # noqa: E501
+    def send_token(self, send_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that sends an NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.send_token(body, async_req=True)
+        >>> thread = api.send_token(send_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SendTokenRequest body: Object representing the token to be sent (required)
+        :param SendTokenRequest send_token_request: Object representing the token to be sent (required)
         :return: SendTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.send_token_with_http_info(body, **kwargs)  # noqa: E501
+            return self.send_token_with_http_info(send_token_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.send_token_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.send_token_with_http_info(send_token_request, **kwargs)  # noqa: E501
             return data
 
-    def send_token_with_http_info(self, body, **kwargs):  # noqa: E501
+    def send_token_with_http_info(self, send_token_request, **kwargs):  # noqa: E501
         """Builds a transaction that sends an NTP1 Token  # noqa: E501
 
         Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.send_token_with_http_info(body, async_req=True)
+        >>> thread = api.send_token_with_http_info(send_token_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SendTokenRequest body: Object representing the token to be sent (required)
+        :param SendTokenRequest send_token_request: Object representing the token to be sent (required)
         :return: SendTokenResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -956,7 +956,7 @@ class NTP1Api(object):
 
         local_var_params = locals()
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['send_token_request']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -970,10 +970,10 @@ class NTP1Api(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in local_var_params or
-                local_var_params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `send_token`")  # noqa: E501
+        # verify the required parameter 'send_token_request' is set
+        if ('send_token_request' not in local_var_params or
+                local_var_params['send_token_request'] is None):
+            raise ValueError("Missing the required parameter `send_token_request` when calling `send_token`")  # noqa: E501
 
         collection_formats = {}
 
@@ -987,8 +987,8 @@ class NTP1Api(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in local_var_params:
-            body_params = local_var_params['body']
+        if 'send_token_request' in local_var_params:
+            body_params = local_var_params['send_token_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

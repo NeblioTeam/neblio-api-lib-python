@@ -18,6 +18,7 @@ __version__ = "1.2.1"
 
 # import apis into sdk package
 from neblioapi.api.insight_api import InsightApi
+from neblioapi.api.json_rpc_api import JSONRPCApi
 from neblioapi.api.ntp1_api import NTP1Api
 from neblioapi.api.testnet_faucet_api import TestnetFaucetApi
 from neblioapi.api.testnet_insight_api import TestnetInsightApi
@@ -73,6 +74,8 @@ from neblioapi.models.issue_token_request_metadata_rules_holders import IssueTok
 from neblioapi.models.issue_token_request_metadata_urls import IssueTokenRequestMetadataUrls
 from neblioapi.models.issue_token_request_transfer import IssueTokenRequestTransfer
 from neblioapi.models.issue_token_response import IssueTokenResponse
+from neblioapi.models.rpc_request import RpcRequest
+from neblioapi.models.rpc_response import RpcResponse
 from neblioapi.models.send_token_request import SendTokenRequest
 from neblioapi.models.send_token_request_to import SendTokenRequestTo
 from neblioapi.models.send_token_response import SendTokenResponse
