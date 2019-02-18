@@ -32,13 +32,13 @@ class JSONRPCApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def r_pc(self, rpc_request, **kwargs):  # noqa: E501
+    def json_rpc(self, rpc_request, **kwargs):  # noqa: E501
         """Send a JSON-RPC call to a localhost neblio-Qt or nebliod node  # noqa: E501
 
         Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from this page due to CORS restrictions. Requires a node to be running locally at 127.0.0.1 - Use port 16326 for testnet.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.r_pc(rpc_request, async_req=True)
+        >>> thread = api.json_rpc(rpc_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,18 +49,18 @@ class JSONRPCApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.r_pc_with_http_info(rpc_request, **kwargs)  # noqa: E501
+            return self.json_rpc_with_http_info(rpc_request, **kwargs)  # noqa: E501
         else:
-            (data) = self.r_pc_with_http_info(rpc_request, **kwargs)  # noqa: E501
+            (data) = self.json_rpc_with_http_info(rpc_request, **kwargs)  # noqa: E501
             return data
 
-    def r_pc_with_http_info(self, rpc_request, **kwargs):  # noqa: E501
+    def json_rpc_with_http_info(self, rpc_request, **kwargs):  # noqa: E501
         """Send a JSON-RPC call to a localhost neblio-Qt or nebliod node  # noqa: E501
 
         Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from this page due to CORS restrictions. Requires a node to be running locally at 127.0.0.1 - Use port 16326 for testnet.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.r_pc_with_http_info(rpc_request, async_req=True)
+        >>> thread = api.json_rpc_with_http_info(rpc_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -88,14 +88,14 @@ class JSONRPCApi(object):
             if key not in all_params and key != "_host_index":
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method r_pc" % key
+                    " to method json_rpc" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'rpc_request' is set
         if ('rpc_request' not in local_var_params or
                 local_var_params['rpc_request'] is None):
-            raise ValueError("Missing the required parameter `rpc_request` when calling `r_pc`")  # noqa: E501
+            raise ValueError("Missing the required parameter `rpc_request` when calling `json_rpc`")  # noqa: E501
 
         collection_formats = {}
 

@@ -28,8 +28,8 @@ class TestJSONRPCApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_r_pc(self):
-        """Test case for r_pc
+    def test_json_rpc(self):
+        """Test case for json_rpc
 
         Send a JSON-RPC call to a localhost neblio-Qt or nebliod node  # noqa: E501
         """

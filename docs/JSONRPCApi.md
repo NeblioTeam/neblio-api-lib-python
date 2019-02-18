@@ -4,11 +4,11 @@ All URIs are relative to *https://ntp1node.nebl.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**r_pc**](JSONRPCApi.md#r_pc) | **POST** / | Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
+[**json_rpc**](JSONRPCApi.md#json_rpc) | **POST** / | Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
 
 
-# **r_pc**
-> RpcResponse r_pc(rpc_request)
+# **json_rpc**
+> RpcResponse json_rpc(rpc_request)
 
 Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
 
@@ -34,10 +34,10 @@ rpc_request = neblioapi.RpcRequest() # RpcRequest |
 
 try:
     # Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
-    api_response = api_instance.r_pc(rpc_request)
+    api_response = api_instance.json_rpc(rpc_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling JSONRPCApi->r_pc: %s\n" % e)
+    print("Exception when calling JSONRPCApi->json_rpc: %s\n" % e)
 ```
 
 ### Parameters
