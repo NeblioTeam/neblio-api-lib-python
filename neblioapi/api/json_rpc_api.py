@@ -35,7 +35,7 @@ class JSONRPCApi(object):
     def json_rpc(self, rpc_request, **kwargs):  # noqa: E501
         """Send a JSON-RPC call to a localhost neblio-Qt or nebliod node  # noqa: E501
 
-        Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from this page due to CORS restrictions. Requires a node to be running locally at 127.0.0.1 - Use port 16326 for testnet.  # noqa: E501
+        Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from a browser due to CORS restrictions. Requires a node to be running locally at 127.0.0.1  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.json_rpc(rpc_request, async_req=True)
@@ -57,7 +57,7 @@ class JSONRPCApi(object):
     def json_rpc_with_http_info(self, rpc_request, **kwargs):  # noqa: E501
         """Send a JSON-RPC call to a localhost neblio-Qt or nebliod node  # noqa: E501
 
-        Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from this page due to CORS restrictions. Requires a node to be running locally at 127.0.0.1 - Use port 16326 for testnet.  # noqa: E501
+        Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from a browser due to CORS restrictions. Requires a node to be running locally at 127.0.0.1  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.json_rpc_with_http_info(rpc_request, async_req=True)
@@ -70,7 +70,7 @@ class JSONRPCApi(object):
                  returns the request thread.
         """
 
-        local_var_hosts = ['http://127.0.0.1:{port}']  # noqa: E501
+        local_var_hosts = ['http://127.0.0.1:6326', 'http://127.0.0.1:16326']  # noqa: E501
         local_var_host = local_var_hosts[0]
         if kwargs.get('_host_index'):
             if int(kwags.get('_host_index')) < 0 or int(kawgs.get('_host_index')) >= len(local_var_hosts):
