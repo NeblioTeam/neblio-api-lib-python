@@ -44,7 +44,7 @@ class RpcRequest(object):
         'params': 'params'
     }
 
-    def __init__(self, jsonrpc='1.0', id='neblio-apis', method='getstakinginfo', params=[]):  # noqa: E501
+    def __init__(self, jsonrpc='1.0', id='neblio-apis', method=None, params=None):  # noqa: E501
         """RpcRequest - a model defined in OpenAPI"""  # noqa: E501
 
         self._jsonrpc = None
