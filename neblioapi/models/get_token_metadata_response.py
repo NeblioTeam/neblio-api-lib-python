@@ -32,6 +32,7 @@ class GetTokenMetadataResponse(object):
     """
     openapi_types = {
         'token_id': 'str',
+        'some_utxo': 'str',
         'divisibility': 'float',
         'lock_status': 'bool',
         'aggregation_policy': 'str',
@@ -49,6 +50,7 @@ class GetTokenMetadataResponse(object):
 
     attribute_map = {
         'token_id': 'tokenId',
+        'some_utxo': 'someUtxo',
         'divisibility': 'divisibility',
         'lock_status': 'lockStatus',
         'aggregation_policy': 'aggregationPolicy',
@@ -64,10 +66,11 @@ class GetTokenMetadataResponse(object):
         'metadata_of_utxo': 'metadataOfUtxo'
     }
 
-    def __init__(self, token_id=None, divisibility=None, lock_status=None, aggregation_policy=None, total_supply=None, num_of_holders=None, num_of_transfers=None, num_of_issuance=None, num_of_burns=None, first_block=None, issuance_txid=None, issue_address=None, metadata_of_issuence=None, metadata_of_utxo=None):  # noqa: E501
+    def __init__(self, token_id=None, some_utxo=None, divisibility=None, lock_status=None, aggregation_policy=None, total_supply=None, num_of_holders=None, num_of_transfers=None, num_of_issuance=None, num_of_burns=None, first_block=None, issuance_txid=None, issue_address=None, metadata_of_issuence=None, metadata_of_utxo=None):  # noqa: E501
         """GetTokenMetadataResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._token_id = None
+        self._some_utxo = None
         self._divisibility = None
         self._lock_status = None
         self._aggregation_policy = None
@@ -85,6 +88,8 @@ class GetTokenMetadataResponse(object):
 
         if token_id is not None:
             self.token_id = token_id
+        if some_utxo is not None:
+            self.some_utxo = some_utxo
         if divisibility is not None:
             self.divisibility = divisibility
         if lock_status is not None:
@@ -134,6 +139,29 @@ class GetTokenMetadataResponse(object):
         """
 
         self._token_id = token_id
+
+    @property
+    def some_utxo(self):
+        """Gets the some_utxo of this GetTokenMetadataResponse.  # noqa: E501
+
+        Example UTXO containing this token.  # noqa: E501
+
+        :return: The some_utxo of this GetTokenMetadataResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._some_utxo
+
+    @some_utxo.setter
+    def some_utxo(self, some_utxo):
+        """Sets the some_utxo of this GetTokenMetadataResponse.
+
+        Example UTXO containing this token.  # noqa: E501
+
+        :param some_utxo: The some_utxo of this GetTokenMetadataResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._some_utxo = some_utxo
 
     @property
     def divisibility(self):

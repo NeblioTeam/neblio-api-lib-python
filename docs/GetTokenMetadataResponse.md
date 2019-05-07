@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token_id** | **str** | ID of the token | [optional] 
+**some_utxo** | **str** | Example UTXO containing this token. | [optional] 
 **divisibility** | **float** | Decimal places the token is divisible to | [optional] 
 **lock_status** | **bool** | Whether issuance of more tokens is locked | [optional] 
 **aggregation_policy** | **str** | Whether the tokens are aggregatable | [optional] 
