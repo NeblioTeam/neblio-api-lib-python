@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import neblioapi
-from neblioapi.models.get_raw_tx_response import GetRawTxResponse  # noqa: E501
+from neblioapi.models.get_token_metadata_response_metadata_of_utxo import GetTokenMetadataResponseMetadataOfUtxo  # noqa: E501
 from neblioapi.rest import ApiException
 
 
-class TestGetRawTxResponse(unittest.TestCase):
-    """GetRawTxResponse unit test stubs"""
+class TestGetTokenMetadataResponseMetadataOfUtxo(unittest.TestCase):
+    """GetTokenMetadataResponseMetadataOfUtxo unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestGetRawTxResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGetRawTxResponse(self):
-        """Test GetRawTxResponse"""
+    def testGetTokenMetadataResponseMetadataOfUtxo(self):
+        """Test GetTokenMetadataResponseMetadataOfUtxo"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = neblioapi.models.get_raw_tx_response.GetRawTxResponse()  # noqa: E501
+        # model = neblioapi.models.get_token_metadata_response_metadata_of_utxo.GetTokenMetadataResponseMetadataOfUtxo()  # noqa: E501
         pass
 
 
