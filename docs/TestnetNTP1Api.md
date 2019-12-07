@@ -262,7 +262,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testnet_get_token_metadata**
-> GetTokenMetadataResponse testnet_get_token_metadata(tokenid)
+> GetTokenMetadataResponse testnet_get_token_metadata(tokenid, verbosity=verbosity)
 
 Get Metadata of Token
 
@@ -280,10 +280,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = neblioapi.TestnetNTP1Api()
 tokenid = 'tokenid_example' # str | TokenId to request metadata for
+verbosity = 3.4 # float | 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses (optional)
 
 try:
     # Get Metadata of Token
-    api_response = api_instance.testnet_get_token_metadata(tokenid)
+    api_response = api_instance.testnet_get_token_metadata(tokenid, verbosity=verbosity)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_get_token_metadata: %s\n" % e)
@@ -294,6 +295,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenid** | **str**| TokenId to request metadata for | 
+ **verbosity** | **float**| 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses | [optional] 
 
 ### Return type
 
@@ -311,7 +313,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **testnet_get_token_metadata_of_utxo**
-> GetTokenMetadataResponse testnet_get_token_metadata_of_utxo(tokenid, utxo)
+> GetTokenMetadataResponse testnet_get_token_metadata_of_utxo(tokenid, utxo, verbosity=verbosity)
 
 Get UTXO Metadata of Token
 
@@ -330,10 +332,11 @@ from pprint import pprint
 api_instance = neblioapi.TestnetNTP1Api()
 tokenid = 'tokenid_example' # str | TokenId to request metadata for
 utxo = 'utxo_example' # str | Specific UTXO to request metadata for
+verbosity = 3.4 # float | 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses (optional)
 
 try:
     # Get UTXO Metadata of Token
-    api_response = api_instance.testnet_get_token_metadata_of_utxo(tokenid, utxo)
+    api_response = api_instance.testnet_get_token_metadata_of_utxo(tokenid, utxo, verbosity=verbosity)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TestnetNTP1Api->testnet_get_token_metadata_of_utxo: %s\n" % e)
@@ -345,6 +348,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenid** | **str**| TokenId to request metadata for | 
  **utxo** | **str**| Specific UTXO to request metadata for | 
+ **verbosity** | **float**| 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses | [optional] 
 
 ### Return type
 

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import neblioapi
-from neblioapi.models.broadcast_tx_response import BroadcastTxResponse  # noqa: E501
+from neblioapi.models.get_token_metadata_response_metadata_of_issuance import GetTokenMetadataResponseMetadataOfIssuance  # noqa: E501
 from neblioapi.rest import ApiException
 
 
-class TestBroadcastTxResponse(unittest.TestCase):
-    """BroadcastTxResponse unit test stubs"""
+class TestGetTokenMetadataResponseMetadataOfIssuance(unittest.TestCase):
+    """GetTokenMetadataResponseMetadataOfIssuance unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestBroadcastTxResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBroadcastTxResponse(self):
-        """Test BroadcastTxResponse"""
+    def testGetTokenMetadataResponseMetadataOfIssuance(self):
+        """Test GetTokenMetadataResponseMetadataOfIssuance"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = neblioapi.models.broadcast_tx_response.BroadcastTxResponse()  # noqa: E501
+        # model = neblioapi.models.get_token_metadata_response_metadata_of_issuance.GetTokenMetadataResponseMetadataOfIssuance()  # noqa: E501
         pass
 
 
